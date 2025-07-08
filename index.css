@@ -1615,6 +1615,34 @@ input:where([type=submit]) {
     box-shadow: none
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+.scrolling-features {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: max-content;
+}
+
+.scrolling-features:hover {
+    animation-play-state: paused;
+}
+
+.feature-box {
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
 progress {
     vertical-align: baseline
 }
