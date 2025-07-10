@@ -1624,7 +1624,64 @@ input:where([type=submit]) {
         transform: translateX(calc(-100% / 2));
     }
 }
+/* Add this to your CSS file */
+.scrolling-features {
+    animation: scroll 30s linear infinite;
+}
 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.service-item {
+    transition: all 0.3s ease;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bgSlide {
+    0% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Add any additional custom styles here */
 .scrolling-features {
     animation: scroll 20s linear infinite;
     display: flex;
@@ -2749,18 +2806,91 @@ video {
 @keyframes bgSlide {
 
     0%,
-    33% {
+    16% {
         background-image: url('one.jpeg');
     }
 
-    34%,
-    66% {
+    17%,
+    34% {
         background-image: url('two.jpg');
     }
 
-    67%,
-    100% {
+    35%,
+    50% {
         background-image: url('three.jpg');
     }
-
+    51%,
+    67% {
+        background-image: url('four.jpg');
+    }
+    68%,
+    84% {
+        background-image: url('five.jpg');
+    }
+    85%,
+    100% {
+        background-image: url('six.jpeg');
+    }
 }
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  /* For elements that should animate when scrolled to */
+  [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+
+  [data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Specific animation types */
+  [data-aos="fade-up"] {
+    transform: translateY(30px);
+  }
+
+  [data-aos="fade-down"] {
+    transform: translateY(-30px);
+  }
+
+  [data-aos="fade-right"] {
+    transform: translateX(-30px);
+  }
+
+  [data-aos="fade-left"] {
+    transform: translateX(30px);
+  }
+
+  [data-aos="zoom-in"] {
+    transform: scale(0.6);
+  }
+
+  [data-aos="zoom-out"] {
+    transform: scale(1.2);
+  }
+
+  [data-aos="flip-up"] {
+    transform: perspective(2500px) rotateX(-90deg);
+  }
+
+  [data-aos="flip-down"] {
+    transform: perspective(2500px) rotateX(90deg);
+  }
+
+  [data-aos="flip-left"] {
+    transform: perspective(2500px) rotateY(90deg);
+  }
+
+  [data-aos="flip-right"] {
+    transform: perspective(2500px) rotateY(-90deg);
+  }
