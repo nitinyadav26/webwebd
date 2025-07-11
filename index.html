@@ -19,11 +19,12 @@
     <header class="sticky top-0 z-50 bg-white shadow-sm">
         <div class="container mx-auto px-4 py-0 flex justify-between items-center flex-wrap">
             <!-- logo  -->
-             <div class="flex-shrink-0 mr-4">
-            <a href="/"> <!-- Link to home page -->
-                <img src="black.png" alt="Maids of Cy-Fair Logo" class="h-20 w-auto"> <!-- Adjust height as needed -->
-            </a>
-        </div>
+            <div class="flex-shrink-0 mr-4">
+                <a href="/"> <!-- Link to home page -->
+                    <img src="black.png" alt="Maids of Cy-Fair Logo" class="h-20 w-auto">
+                    <!-- Adjust height as needed -->
+                </a>
+            </div>
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-6">
                 <a href="#pricing" class="font-medium hover:text-primary transition">Services</a>
@@ -279,978 +280,673 @@
         <!-- Pricing Section -->
 
         <body class="bg-gray-50">
-            <section class="py-16 bg-white text-gray-800">
+
+            
+            <section id="pricing" class="py-16 bg-gray-50" data-aos="fade-up">
                 <div class="container mx-auto px-4">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-indigo-700">✨ What's Included in Our
-                        Standard Cleaning</h2>
-
-                    <div class="max-w-3xl mx-auto text-center mb-12">
-                        <p class="text-lg text-gray-600 mb-6 px-4">Our standard cleaning covers all the essentials to
-                            keep your home fresh and tidy. Customize your cleaning by adding specialized services!</p>
-                        <button
-                            class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg mx-auto">
-                            Customize Your Cleaning ➔
-                        </button>
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Your Custom Quote</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            This is just an estimate. Click BOOK NOW to tailor your cleaning. Remove rooms and areas to
+                            lower your price and pay only for what we clean.
+                        </p>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-6 mb-12 max-w-5xl mx-auto">
-                        <!-- Kitchen -->
-                        <div
-                            class="service-category bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-indigo-300 transition duration-300 hover:shadow-lg">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <span class="text-indigo-600 text-2xl">🍽️</span>
+                    <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="md:flex">
+                            <!-- Left panel -->
+                            <div class="md:w-1/2 p-8 md:p-10">
+                                <!-- Home Size Slider -->
+                                <div class="mb-10">
+                                    <label class="block text-gray-700 text-lg font-semibold mb-4">Select Home Size (sq
+                                        ft)</label>
+                                    <div class="relative px-2">
+                                        <input id="area-slider" type="range" min="1500" max="4500" step="500"
+                                            value="1500"
+                                            class="area-slider w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
+                                        <div class="flex justify-between text-xs text-gray-500 mt-3 px-1">
+                                            <span>1500</span><span>2000</span><span>2500</span><span>3000</span><span>3500</span><span>4000</span><span>4500+</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-6 text-center">
+                                        <p id="area-display" class="text-3xl font-bold text-primary">1500 sq ft</p>
+                                    </div>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-800">Kitchen Deep Clean</h3>
-                            </div>
-                            <ul class="space-y-2">
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Countertops wiped</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Sink cleaned</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Stovetop cleaned</span>
-                                </li>
-                                <div id="kitchen-extra" class="hidden">
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Microwave interior cleaned</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Exterior of appliances wiped</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Cabinet fronts spot-cleaned</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Trash emptied</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Floors swept and mopped</span>
-                                    </li>
-                                </div>
-                            </ul>
-                            <button id="kitchen-btn"
-                                class="mt-4 text-indigo-600 font-medium flex items-center hover:text-indigo-800 transition duration-200 see-more-btn">
-                                See all kitchen services
-                                <svg id="kitchen-icon" xmlns="http://www.w3.org/2000/svg"
-                                    class="h-4 w-4 ml-1 transform transition-transform" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
 
-                        <!-- Bathrooms -->
-                        <div
-                            class="service-category bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-indigo-300 transition duration-300 hover:shadow-lg">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <span class="text-indigo-600 text-2xl">🚿</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-800">Bathroom Refresh</h3>
-                            </div>
-                            <ul class="space-y-2">
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Counters and sinks cleaned</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Toilets scrubbed</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Mirrors cleaned</span>
-                                </li>
-                                <div id="bathroom-extra" class="hidden">
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Showers and tubs cleaned</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Floors swept and mopped</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Trash emptied</span>
-                                    </li>
-                                </div>
-                            </ul>
-                            <button id="bathroom-btn"
-                                class="mt-4 text-indigo-600 font-medium flex items-center hover:text-indigo-800 transition duration-200 see-more-btn">
-                                See all bathroom services
-                                <svg id="bathroom-icon" xmlns="http://www.w3.org/2000/svg"
-                                    class="h-4 w-4 ml-1 transform transition-transform" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
+                                <!-- À la carte menu -->
+                                <div class="mt-12">
+                                    <h3 class="text-xl font-bold mb-6 text-gray-800">Customize Your Cleaning</h3>
+                                    <div class="space-y-4">
+                                        <!-- Bedrooms -->
+                                        <div class="border border-gray-200 rounded-lg p-4">
+                                            <div class="flex justify-between items-center">
+                                                <h4 class="font-semibold text-gray-800">Bedrooms</h4>
+                                                <div class="flex items-center space-x-3">
+                                                    <button class="quantity-btn minus" data-room="bedroom">-</button>
+                                                    <span id="bedroom-count" class="font-medium">1</span>
+                                                    <button class="quantity-btn plus" data-room="bedroom">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                        <!-- Bedrooms -->
-                        <div
-                            class="service-category bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-indigo-300 transition duration-300 hover:shadow-lg">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <span class="text-indigo-600 text-2xl">🛏️</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-800">Bedroom Bliss</h3>
-                            </div>
-                            <ul class="space-y-2">
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Dusting of accessible surfaces</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Ceiling fans dusted</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Beds tidied</span>
-                                </li>
-                                <div id="bedroom-extra" class="hidden">
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Linens changed if clean set is provided</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Floors vacuumed or mopped</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Trash emptied</span>
-                                    </li>
-                                </div>
-                            </ul>
-                            <button id="bedroom-btn"
-                                class="mt-4 text-indigo-600 font-medium flex items-center hover:text-indigo-800 transition duration-200 see-more-btn">
-                                See all bedroom services
-                                <svg id="bedroom-icon" xmlns="http://www.w3.org/2000/svg"
-                                    class="h-4 w-4 ml-1 transform transition-transform" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
+                                        <!-- Bathrooms -->
+                                        <div class="border border-gray-200 rounded-lg p-4">
+                                            <div class="flex justify-between items-center">
+                                                <h4 class="font-semibold text-gray-800">Bathrooms</h4>
+                                                <div class="flex items-center space-x-3">
+                                                    <button class="quantity-btn minus" data-room="bathroom">-</button>
+                                                    <span id="bathroom-count" class="font-medium">1</span>
+                                                    <button class="quantity-btn plus" data-room="bathroom">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                        <!-- Living Areas -->
-                        <div
-                            class="service-category bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-indigo-300 transition duration-300 hover:shadow-lg">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <span class="text-indigo-600 text-2xl">🛋️</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-800">Living Spaces</h3>
-                            </div>
-                            <ul class="space-y-2">
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Window ledges dusted</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Accessible surface dusting</span>
-                                </li>
-                                <li class="flex items-start service-item">
-                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Light tidying (pillows, throws)</span>
-                                </li>
-                                <div id="living-extra" class="hidden">
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Floors vacuumed or mopped</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Trash emptied</span>
-                                    </li>
-                                    <li class="flex items-start service-item fade-in">
-                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span>Dusting under furniture</span>
-                                    </li>
-                                </div>
-                            </ul>
-                            <button id="living-btn"
-                                class="mt-4 text-indigo-600 font-medium flex items-center hover:text-indigo-800 transition duration-200 see-more-btn">
-                                See all living area services
-                                <svg id="living-icon" xmlns="http://www.w3.org/2000/svg"
-                                    class="h-4 w-4 ml-1 transform transition-transform" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                                        <!-- Kitchen -->
+                                        <div class="border border-gray-200 rounded-lg p-4">
+                                            <div class="flex justify-between items-center">
+                                                <h4 class="font-semibold text-gray-800">Kitchen</h4>
+                                                <div class="flex items-center">
+                                                    <input type="checkbox" id="kitchen-toggle" checked
+                                                        class="toggle-checkbox" />
+                                                    <label for="kitchen-toggle" class="toggle-label ml-3"></label>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                    <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100 max-w-3xl mx-auto">
-                        <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-full mr-4 mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                                        <!-- Living Room -->
+                                        <div class="border border-gray-200 rounded-lg p-4">
+                                            <div class="flex justify-between items-center">
+                                                <h4 class="font-semibold text-gray-800">Living Room</h4>
+                                                <div class="flex items-center">
+                                                    <input type="checkbox" id="livingroom-toggle" checked
+                                                        class="toggle-checkbox" />
+                                                    <label for="livingroom-toggle" class="toggle-label ml-3"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Service Type Selection -->
+                                <div class="mt-10 space-y-4">
+                                    <h3 class="text-xl font-bold mb-2 text-gray-800">Select Service Type</h3>
+
+                                    <div class="flex flex-col space-y-3">
+                                        <div class="flex items-center">
+                                            <input type="radio" id="service-onetime" name="service-type" value="onetime"
+                                                class="service-radio hidden" checked>
+                                            <label for="service-onetime" class="service-radio-label flex-1">
+                                                <span class="font-medium">One-time Cleaning</span>
+                                                <span id="onetime-final-price"
+                                                    class="float-right font-bold text-primary">$125</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <input type="radio" id="service-moveout" name="service-type" value="moveout"
+                                                class="service-radio hidden">
+                                            <label for="service-moveout" class="service-radio-label flex-1">
+                                                <span class="font-medium">Move In/Out Cleaning</span>
+                                                <span id="moveout-final-price"
+                                                    class="float-right font-bold text-primary">$175</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <input type="radio" id="service-recurring" name="service-type"
+                                                value="recurring" class="service-radio hidden">
+                                            <label for="service-recurring" class="service-radio-label flex-1">
+                                                <span class="font-medium">Recurring Services</span>
+                                                <span class="float-right text-gray-500">Select frequency later</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Book Now -->
+                                <div class="mt-10">
+                                    <button id="book-now-btn"
+                                        class="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                        Book Now
+                                    </button>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="text-lg font-bold text-indigo-800 mb-2">Want more than the standard?</h4>
-                                <p class="text-gray-700 mb-4">Upgrade your cleaning with our premium add-ons: deep
-                                    fridge cleaning, oven detailing, interior window washing, and more!</p>
-                                <button
-                                    class="relative overflow-hidden group bg-white text-indigo-600 hover:bg-indigo-600 hover:text-white font-medium py-2 px-6 rounded-full border border-indigo-300 transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-indigo-100 active:scale-95">
-                                    <span class="relative z-10 flex items-center">
-                                        Explore Add-ons
-                                        <span
-                                            class="ml-2 transition-all duration-300 transform group-hover:translate-x-1">
-                                            ➔
-                                        </span>
-                                    </span>
-                                    <span
-                                        class="absolute inset-0 bg-indigo-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                                </button>
+
+                            <!-- Right panel -->
+                            <div class="md:w-1/2 bg-primary bg-opacity-5 p-8 md:p-10">
+                                <h3 class="text-2xl font-bold mb-8 text-center text-gray-800">Your Custom Quote</h3>
+                                <div class="space-y-6">
+                                    <!-- One‑time -->
+                                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                                        <button onclick="toggleDropdown('onetime-dropdown', this)"
+                                            class="w-full flex justify-between items-center p-5 font-semibold hover:bg-gray-50 transition">
+                                            <div>
+                                                <p class="text-lg">One‑time Cleaning</p>
+                                                <p class="text-sm text-gray-500">Perfect for occasional deep cleans</p>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <p id="onetime-price" class="font-bold text-xl text-primary">$125</p>
+                                                <i class="fas fa-chevron-down transition-transform text-gray-500"></i>
+                                            </div>
+                                        </button>
+                                        <div id="onetime-dropdown"
+                                            class="hidden bg-gray-50 px-5 pb-4 text-gray-700 space-y-3">
+                                            <div class="pt-2">
+                                                <p class="font-medium text-gray-800 mb-3">Standard Cleaning Includes:
+                                                </p>
+                                                <ul class="space-y-2 text-sm">
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Dusting all surfaces</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Vacuuming/mopping floors</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Cleaning mirrors and glass</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Kitchen surface cleaning</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Bathroom sanitization</li>
+                                                </ul>
+                                            </div>
+                                            <div class="pt-3">
+                                                <p class="font-medium text-gray-800 mb-3">Add‑On Services (<span
+                                                        class="count">0</span> selected):</p>
+                                                <ul class="grid grid-cols-1 gap-2 text-sm">
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="10" data-service="onetime" />
+                                                        <label class="flex-1">🪟 Blinds <span
+                                                                class="text-xs text-gray-500 block">Feather dusting
+                                                                only</span></label>
+                                                        <span class="font-medium">$10.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="40" data-service="onetime" />
+                                                        <label class="flex-1">🔥 Oven Cleaning <span
+                                                                class="text-xs text-gray-500 block">Cleaning of 1
+                                                                oven</span></label>
+                                                        <span class="font-medium">$40.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="20" data-service="onetime" data-sqft="under" />
+                                                        <label class="flex-1">🧹 Dust Baseboards <span
+                                                                class="text-xs text-gray-500 block">Feather dust under
+                                                                2500 sf</span></label>
+                                                        <span class="font-medium">$20.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="30" data-service="onetime" data-sqft="over" />
+                                                        <label class="flex-1">🧹 Dust Baseboards <span
+                                                                class="text-xs text-gray-500 block">Feather dust over
+                                                                2500 sf</span></label>
+                                                        <span class="font-medium">$30.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="40" data-service="onetime" data-sqft="under" />
+                                                        <label class="flex-1">🪟 Dust Shutters <span
+                                                                class="text-xs text-gray-500 block">Feather dust under
+                                                                2500 sf</span></label>
+                                                        <span class="font-medium">$40.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="60" data-service="onetime" data-sqft="over" />
+                                                        <label class="flex-1">🪟 Dust Shutters <span
+                                                                class="text-xs text-gray-500 block">Feather dust over
+                                                                2500 sf</span></label>
+                                                        <span class="font-medium">$60.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="45" data-service="onetime" />
+                                                        <label class="flex-1">🧊 Inside Refrigerator <span
+                                                                class="text-xs text-gray-500 block">Clean inside of
+                                                                fridge (not freezer)</span></label>
+                                                        <span class="font-medium">$45.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="15" data-service="onetime" />
+                                                        <label class="flex-1">🛋 Vacuum Couch <span
+                                                                class="text-xs text-gray-500 block">Top and underneath
+                                                                (1 couch + 1 loveseat or 1 sectional)</span></label>
+                                                        <span class="font-medium">$15.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="10" data-service="onetime" />
+                                                        <label class="flex-1">🌀 Dusting High Ceiling Fan <span
+                                                                class="text-xs text-gray-500 block">Dusting ceiling fans
+                                                                over 10ft</span></label>
+                                                        <span class="font-medium">$10.00</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Move In / Move Out -->
+                                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                                        <button onclick="toggleDropdown('moveout-dropdown', this)"
+                                            class="w-full flex justify-between items-center p-5 font-semibold hover:bg-gray-50 transition">
+                                            <div>
+                                                <p class="text-lg">Move In/Out Cleaning</p>
+                                                <p class="text-sm text-gray-500">Thorough cleaning for transitions</p>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <p id="moveout-price" class="font-bold text-xl text-primary">$175</p>
+                                                <i class="fas fa-chevron-down transition-transform text-gray-500"></i>
+                                            </div>
+                                        </button>
+                                        <div id="moveout-dropdown"
+                                            class="hidden bg-gray-50 px-5 pb-4 text-gray-700 space-y-3">
+                                            <div class="pt-2">
+                                                <p class="font-medium text-gray-800 mb-3">Standard Cleaning Includes:
+                                                </p>
+                                                <ul class="space-y-2 text-sm">
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Deep cleaning of all rooms</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Inside cabinets and closets</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Appliance interior cleaning</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Baseboard cleaning</li>
+                                                    <li class="flex items-start"><i
+                                                            class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                                                        Window sills and tracks</li>
+                                                </ul>
+                                            </div>
+                                            <div class="pt-3">
+                                                <p class="font-medium text-gray-800 mb-3">Add‑On Services (<span
+                                                        class="count">0</span> selected):</p>
+                                                <ul class="grid grid-cols-1 gap-2 text-sm">
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="80" data-service="moveout" />
+                                                        <label class="flex-1">🗄️ Inside Kitchen/Bathroom Cabinets <span
+                                                                class="text-xs text-gray-500 block">Wiping out using
+                                                                micro fiber</span></label>
+                                                        <span class="font-medium">$80.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="40" data-service="moveout" />
+                                                        <label class="flex-1">🔥 Oven Cleaning <span
+                                                                class="text-xs text-gray-500 block">Cleaning of 1
+                                                                oven</span></label>
+                                                        <span class="font-medium">$40.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="60" data-service="moveout" data-sqft="under" />
+                                                        <label class="flex-1">🧼 Hand Clean Baseboards <span
+                                                                class="text-xs text-gray-500 block">Hand wipe under 2500
+                                                                sf</span></label>
+                                                        <span class="font-medium">$60.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="80" data-service="moveout" data-sqft="over" />
+                                                        <label class="flex-1">🧼 Hand Clean Baseboards <span
+                                                                class="text-xs text-gray-500 block">Hand wipe over 2500
+                                                                sf</span></label>
+                                                        <span class="font-medium">$80.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="45" data-service="moveout" />
+                                                        <label class="flex-1">🧊 Inside Refrigerator <span
+                                                                class="text-xs text-gray-500 block">Clean inside of
+                                                                fridge (not freezer)</span></label>
+                                                        <span class="font-medium">$45.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="40" data-service="moveout" />
+                                                        <label class="flex-1">🧽 Clean Exterior Kitchen/Bathroom
+                                                            Cabinets <span class="text-xs text-gray-500 block">Hand wipe
+                                                                all exterior upper and lower cabinets</span></label>
+                                                        <span class="font-medium">$40.00</span>
+                                                    </li>
+                                                    <li class="flex items-start">
+                                                        <input type="checkbox" class="addon-checkbox mr-3 mt-1"
+                                                            data-price="75" data-service="moveout" />
+                                                        <label class="flex-1">🚪 Cleaning of Interior Doors/Frames <span
+                                                                class="text-xs text-gray-500 block">Hand wipe interior
+                                                                doors/frames/molding</span></label>
+                                                        <span class="font-medium">$75.00</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recurring Services -->
+                                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                                        <button onclick="toggleDropdown('recurring-dropdown', this)"
+                                            class="w-full flex justify-between items-center p-5 font-semibold hover:bg-gray-50 transition">
+                                            <div>
+                                                <p class="text-lg">Recurring Services</p>
+                                                <p class="text-sm text-gray-500">Save with regular cleaning</p>
+                                            </div>
+                                            <i class="fas fa-chevron-down transition-transform text-gray-500"></i>
+                                        </button>
+                                        <div id="recurring-dropdown"
+                                            class="hidden bg-gray-50 px-5 pb-4 text-gray-700 space-y-4">
+                                            <!-- Monthly -->
+                                            <div class="pt-3">
+                                                <div class="flex justify-between items-center mb-2">
+                                                    <p class="font-medium">Monthly Cleaning</p>
+                                                    <p id="monthly-price" class="font-bold text-primary">$119</p>
+                                                </div>
+                                                <p class="text-xs text-gray-500 mb-3">Includes 5% discount on standard
+                                                    cleaning</p>
+                                            </div>
+
+                                            <!-- Bi‑weekly -->
+                                            <div class="pt-3">
+                                                <div class="flex justify-between items-center mb-2">
+                                                    <p class="font-medium">Bi‑weekly Cleaning</p>
+                                                    <p id="biweekly-price" class="font-bold text-primary">$113</p>
+                                                </div>
+                                                <p class="text-xs text-gray-500 mb-3">Save 10‑15% per clean</p>
+                                            </div>
+
+                                            <!-- Weekly -->
+                                            <div class="pt-3">
+                                                <div class="flex justify-between items-center mb-2">
+                                                    <p class="font-medium">Weekly Cleaning</p>
+                                                    <p id="weekly-price" class="font-bold text-primary">$106</p>
+                                                </div>
+                                                <p class="text-xs text-gray-500">Save 15‑20% per clean</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    // Set up event listeners for all see more buttons
-                    const buttons = document.querySelectorAll('.see-more-btn');
+                <style>
+                    .area-slider::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: #EF4444;
+                        cursor: pointer;
+                    }
 
-                    buttons.forEach(button => {
-                        button.addEventListener('click', function () {
-                            const category = this.id.split('-')[0];
-                            const extraDiv = document.getElementById(`${category}-extra`);
-                            const icon = document.getElementById(`${category}-icon`);
+                    .area-slider::-moz-range-thumb {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: #EF4444;
+                        cursor: pointer;
+                    }
 
-                            if (extraDiv.classList.contains('hidden')) {
-                                // Show extra content
-                                extraDiv.classList.remove('hidden');
-                                setTimeout(() => {
-                                    extraDiv.querySelectorAll('li').forEach(item => {
-                                        item.classList.add('fade-in');
-                                    });
-                                }, 10);
+                    .quantity-btn {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background: #F3F4F6;
+                        color: #4B5563;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                    }
 
-                                // Change button text and rotate icon
-                                this.querySelector('span').textContent = this.querySelector('span').textContent.replace('See all', 'See less');
-                                icon.classList.add('rotate-180');
-                            } else {
-                                // Hide extra content
-                                extraDiv.classList.add('hidden');
-                                extraDiv.querySelectorAll('li').forEach(item => {
-                                    item.classList.remove('fade-in');
+                    .quantity-btn:hover {
+                        background: #E5E7EB;
+                    }
+
+                    .toggle-checkbox {
+                        display: none;
+                    }
+
+                    .toggle-label {
+                        display: inline-block;
+                        width: 50px;
+                        height: 26px;
+                        background: #E5E7EB;
+                        border-radius: 13px;
+                        position: relative;
+                        cursor: pointer;
+                        transition: background 0.2s;
+                    }
+
+                    .toggle-label:after {
+                        content: '';
+                        position: absolute;
+                        top: 3px;
+                        left: 3px;
+                        width: 20px;
+                        height: 20px;
+                        background: white;
+                        border-radius: 50%;
+                        transition: transform 0.2s;
+                    }
+
+                    .toggle-checkbox:checked+.toggle-label {
+                        background: #EF4444;
+                    }
+
+                    .toggle-checkbox:checked+.toggle-label:after {
+                        transform: translateX(24px);
+                    }
+
+                    .addon-checkbox:checked {
+                        accent-color: #EF4444;
+                    }
+
+                    .service-radio-label {
+                        display: block;
+                        padding: 12px 16px;
+                        border: 2px solid #E5E7EB;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                    }
+
+                    .service-radio:checked+.service-radio-label {
+                        border-color: #EF4444;
+                        background-color: #FEE2E2;
+                    }
+
+                    .service-radio:focus+.service-radio-label {
+                        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+                    }
+                </style>
+
+                <script>
+                    // Pricing data
+                    const pricingTable = {
+                        1500: { base: 125, monthly: 119, biweekly: 113, weekly: 106, moveout: 175 },
+                        2000: { base: 155, monthly: 147, biweekly: 140, weekly: 132, moveout: 215 },
+                        2500: { base: 165, monthly: 157, biweekly: 149, weekly: 140, moveout: 235 },
+                        3000: { base: 175, monthly: 166, biweekly: 158, weekly: 149, moveout: 255 },
+                        3500: { base: 185, monthly: 176, biweekly: 167, weekly: 157, moveout: 275 },
+                        4000: { base: 195, monthly: 185, biweekly: 176, weekly: 166, moveout: 295 },
+                        4500: { base: 205, monthly: 195, biweekly: 185, weekly: 174, moveout: 315 }
+                    };
+
+                    // Room pricing
+                    const roomPrices = {
+                        bedroom: 25,
+                        bathroom: 30,
+                        kitchen: 40,
+                        livingroom: 35
+                    };
+
+                    function updatePrices(area) {
+                        const p = pricingTable[area];
+                        document.getElementById('onetime-price').textContent = `$${p.base}`;
+                        document.getElementById('moveout-price').textContent = `$${p.moveout}`;
+                        document.getElementById('monthly-price').textContent = `$${p.monthly}`;
+                        document.getElementById('biweekly-price').textContent = `$${p.biweekly}`;
+                        document.getElementById('weekly-price').textContent = `$${p.weekly}`;
+
+                        // Update final prices in radio buttons
+                        document.getElementById('onetime-final-price').textContent = `$${p.base}`;
+                        document.getElementById('moveout-final-price').textContent = `$${p.moveout}`;
+
+                        // Update data attributes
+                        document.getElementById('onetime-price').dataset.base = p.base;
+                        document.getElementById('moveout-price').dataset.base = p.moveout;
+                        document.getElementById('monthly-price').dataset.base = p.monthly;
+                        document.getElementById('biweekly-price').dataset.base = p.biweekly;
+                        document.getElementById('weekly-price').dataset.base = p.weekly;
+
+                        // Update sqft-dependent options
+                        const sqftType = area < 2500 ? "under" : "over";
+                        document.querySelectorAll(`[data-sqft]:not([data-sqft="${sqftType}"])`).forEach(el => {
+                            el.disabled = true;
+                            el.parentElement.style.opacity = "0.5";
+                        });
+                        document.querySelectorAll(`[data-sqft="${sqftType}"]`).forEach(el => {
+                            el.disabled = false;
+                            el.parentElement.style.opacity = "1";
+                        });
+                    }
+
+                    function toggleDropdown(id, btn) {
+                        const panel = document.getElementById(id);
+                        const chevron = btn.querySelector('i.fas');
+                        panel.classList.toggle('hidden');
+                        chevron.classList.toggle('rotate-180');
+                    }
+
+                    function calculateTotal() {
+                        const area = document.getElementById('area-slider').value;
+                        const p = pricingTable[area];
+
+                        // Get room counts
+                        const bedroomCount = parseInt(document.getElementById('bedroom-count').textContent);
+                        const bathroomCount = parseInt(document.getElementById('bathroom-count').textContent);
+                        const kitchenIncluded = document.getElementById('kitchen-toggle').checked;
+                        const livingroomIncluded = document.getElementById('livingroom-toggle').checked;
+
+                        // Calculate base price adjustment
+                        let roomAdjustment = 0;
+                        roomAdjustment += (bedroomCount - 1) * roomPrices.bedroom;
+                        roomAdjustment += (bathroomCount - 1) * roomPrices.bathroom;
+                        if (!kitchenIncluded) roomAdjustment -= roomPrices.kitchen;
+                        if (!livingroomIncluded) roomAdjustment -= roomPrices.livingroom;
+
+                        // Update prices for each service type
+                        ['onetime', 'moveout', 'monthly', 'biweekly', 'weekly'].forEach(svc => {
+                            const priceEl = document.getElementById(`${svc}-price`);
+                            const base = parseInt(priceEl?.dataset.base, 10) || 0;
+
+                            // Calculate add-ons for this service type
+                            let addonTotal = 0;
+                            document.querySelectorAll(`.addon-checkbox[data-service="${svc}"]:checked`).forEach(checkbox => {
+                                addonTotal += parseInt(checkbox.dataset.price, 10);
+                            });
+
+                            const total = Math.max(0, base + roomAdjustment + addonTotal);
+                            if (priceEl) priceEl.textContent = `$${total}`;
+
+                            // Update count display
+                            const dropdown = document.getElementById(`${svc}-dropdown`);
+                            if (dropdown) {
+                                const count = dropdown.querySelectorAll(`.addon-checkbox[data-service="${svc}"]:checked`).length;
+                                dropdown.querySelector('.count').textContent = count;
+                            }
+
+                            // Update final prices for radio buttons
+                            if (svc === 'onetime') {
+                                document.getElementById('onetime-final-price').textContent = `$${total}`;
+                            } else if (svc === 'moveout') {
+                                document.getElementById('moveout-final-price').textContent = `$${total}`;
+                            }
+                        });
+                    }
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        // Area slider
+                        const slider = document.getElementById('area-slider');
+                        const disp = document.getElementById('area-display');
+                        slider.addEventListener('input', e => {
+                            const val = e.target.value;
+                            disp.textContent = `${val} sq ft`;
+                            updatePrices(val);
+                            calculateTotal();
+                        });
+                        updatePrices(slider.value);
+
+                        // Quantity buttons
+                        document.querySelectorAll('.quantity-btn').forEach(btn => {
+                            btn.addEventListener('click', function () {
+                                const room = this.dataset.room;
+                                const countEl = document.getElementById(`${room}-count`);
+                                let count = parseInt(countEl.textContent);
+
+                                if (this.classList.contains('plus')) {
+                                    count = Math.min(count + 1, 10);
+                                } else {
+                                    count = Math.max(count - 1, 0);
+                                }
+
+                                countEl.textContent = count;
+                                calculateTotal();
+                            });
+                        });
+
+                        // Toggle switches
+                        document.querySelectorAll('.toggle-checkbox').forEach(checkbox => {
+                            checkbox.addEventListener('change', calculateTotal);
+                        });
+
+                        // Add-on checkboxes
+                        document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
+                            checkbox.addEventListener('change', calculateTotal);
+                        });
+
+                        // Service type radio buttons
+                        document.querySelectorAll('.service-radio').forEach(radio => {
+                            radio.addEventListener('change', function () {
+                                document.querySelectorAll('.service-radio-label').forEach(label => {
+                                    label.classList.remove('border-red-500', 'bg-red-50');
                                 });
+                                if (this.checked) {
+                                    this.nextElementSibling.classList.add('border-red-500', 'bg-red-50');
+                                }
+                            });
+                        });
 
-                                // Change button text and rotate icon
-                                this.querySelector('span').textContent = this.querySelector('span').textContent.replace('See less', 'See all');
-                                icon.classList.remove('rotate-180');
+                        // Book Now button
+                        document.getElementById('book-now-btn').addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const selectedService = document.querySelector('input[name="service-type"]:checked').value;
+
+                            if (selectedService === 'recurring') {
+                                alert('Thank you for choosing recurring service! We will contact you to discuss the frequency.');
+                            } else {
+                                alert(`Thank you for your booking! Total price: ${document.getElementById(`${selectedService}-final-price`).textContent}`);
                             }
                         });
                     });
-                });
-            </script>
-            <section id="pricing" class="py-16 bg-gray-50" data-aos="fade-up">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Your Custom Quote</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                This is just an estimate. Click BOOK NOW to tailor your cleaning. Remove rooms and areas to
-                lower your price and pay only for what we clean.
-            </p>
-        </div>
-
-        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="md:flex">
-                <!-- Left panel -->
-                <div class="md:w-1/2 p-8 md:p-10">
-                    <!-- Home Size Slider -->
-                    <div class="mb-10">
-                        <label class="block text-gray-700 text-lg font-semibold mb-4">Select Home Size (sq ft)</label>
-                        <div class="relative px-2">
-                            <input id="area-slider" type="range" min="1500" max="4500" step="500" value="1500" 
-                                   class="area-slider w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
-                            <div class="flex justify-between text-xs text-gray-500 mt-3 px-1">
-                                <span>1500</span><span>2000</span><span>2500</span><span>3000</span><span>3500</span><span>4000</span><span>4500+</span>
-                            </div>
-                        </div>
-                        <div class="mt-6 text-center">
-                            <p id="area-display" class="text-3xl font-bold text-primary">1500 sq ft</p>
-                        </div>
-                    </div>
-
-                    <!-- À la carte menu -->
-                    <div class="mt-12">
-                        <h3 class="text-xl font-bold mb-6 text-gray-800">Customize Your Cleaning</h3>
-                        <div class="space-y-4">
-                            <!-- Bedrooms -->
-                            <div class="border border-gray-200 rounded-lg p-4">
-                                <div class="flex justify-between items-center">
-                                    <h4 class="font-semibold text-gray-800">Bedrooms</h4>
-                                    <div class="flex items-center space-x-3">
-                                        <button class="quantity-btn minus" data-room="bedroom">-</button>
-                                        <span id="bedroom-count" class="font-medium">1</span>
-                                        <button class="quantity-btn plus" data-room="bedroom">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Bathrooms -->
-                            <div class="border border-gray-200 rounded-lg p-4">
-                                <div class="flex justify-between items-center">
-                                    <h4 class="font-semibold text-gray-800">Bathrooms</h4>
-                                    <div class="flex items-center space-x-3">
-                                        <button class="quantity-btn minus" data-room="bathroom">-</button>
-                                        <span id="bathroom-count" class="font-medium">1</span>
-                                        <button class="quantity-btn plus" data-room="bathroom">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Kitchen -->
-                            <div class="border border-gray-200 rounded-lg p-4">
-                                <div class="flex justify-between items-center">
-                                    <h4 class="font-semibold text-gray-800">Kitchen</h4>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="kitchen-toggle" checked class="toggle-checkbox" />
-                                        <label for="kitchen-toggle" class="toggle-label ml-3"></label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Living Room -->
-                            <div class="border border-gray-200 rounded-lg p-4">
-                                <div class="flex justify-between items-center">
-                                    <h4 class="font-semibold text-gray-800">Living Room</h4>
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="livingroom-toggle" checked class="toggle-checkbox" />
-                                        <label for="livingroom-toggle" class="toggle-label ml-3"></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Type Selection -->
-                    <div class="mt-10 space-y-4">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Select Service Type</h3>
-                        
-                        <div class="flex flex-col space-y-3">
-                            <div class="flex items-center">
-                                <input type="radio" id="service-onetime" name="service-type" value="onetime" class="service-radio hidden" checked>
-                                <label for="service-onetime" class="service-radio-label flex-1">
-                                    <span class="font-medium">One-time Cleaning</span>
-                                    <span id="onetime-final-price" class="float-right font-bold text-primary">$125</span>
-                                </label>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <input type="radio" id="service-moveout" name="service-type" value="moveout" class="service-radio hidden">
-                                <label for="service-moveout" class="service-radio-label flex-1">
-                                    <span class="font-medium">Move In/Out Cleaning</span>
-                                    <span id="moveout-final-price" class="float-right font-bold text-primary">$175</span>
-                                </label>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <input type="radio" id="service-recurring" name="service-type" value="recurring" class="service-radio hidden">
-                                <label for="service-recurring" class="service-radio-label flex-1">
-                                    <span class="font-medium">Recurring Services</span>
-                                    <span class="float-right text-gray-500">Select frequency later</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Book Now -->
-                    <div class="mt-10">
-                        <button id="book-now-btn" class="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                            Book Now
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Right panel -->
-                <div class="md:w-1/2 bg-primary bg-opacity-5 p-8 md:p-10">
-                    <h3 class="text-2xl font-bold mb-8 text-center text-gray-800">Your Custom Quote</h3>
-                    <div class="space-y-6">
-                        <!-- One‑time -->
-                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                            <button onclick="toggleDropdown('onetime-dropdown', this)"
-                                class="w-full flex justify-between items-center p-5 font-semibold hover:bg-gray-50 transition">
-                                <div>
-                                    <p class="text-lg">One‑time Cleaning</p>
-                                    <p class="text-sm text-gray-500">Perfect for occasional deep cleans</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <p id="onetime-price" class="font-bold text-xl text-primary">$125</p>
-                                    <i class="fas fa-chevron-down transition-transform text-gray-500"></i>
-                                </div>
-                            </button>
-                            <div id="onetime-dropdown" class="hidden bg-gray-50 px-5 pb-4 text-gray-700 space-y-3">
-                                <div class="pt-2">
-                                    <p class="font-medium text-gray-800 mb-3">Standard Cleaning Includes:</p>
-                                    <ul class="space-y-2 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Dusting all surfaces</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Vacuuming/mopping floors</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Cleaning mirrors and glass</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Kitchen surface cleaning</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Bathroom sanitization</li>
-                                    </ul>
-                                </div>
-                                <div class="pt-3">
-                                    <p class="font-medium text-gray-800 mb-3">Add‑On Services (<span class="count">0</span> selected):</p>
-                                    <ul class="grid grid-cols-1 gap-2 text-sm">
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="10" data-service="onetime"/>
-                                            <label class="flex-1">🪟 Blinds <span class="text-xs text-gray-500 block">Feather dusting only</span></label>
-                                            <span class="font-medium">$10.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="40" data-service="onetime"/>
-                                            <label class="flex-1">🔥 Oven Cleaning <span class="text-xs text-gray-500 block">Cleaning of 1 oven</span></label>
-                                            <span class="font-medium">$40.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="20" data-service="onetime" data-sqft="under"/>
-                                            <label class="flex-1">🧹 Dust Baseboards <span class="text-xs text-gray-500 block">Feather dust under 2500 sf</span></label>
-                                            <span class="font-medium">$20.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="30" data-service="onetime" data-sqft="over"/>
-                                            <label class="flex-1">🧹 Dust Baseboards <span class="text-xs text-gray-500 block">Feather dust over 2500 sf</span></label>
-                                            <span class="font-medium">$30.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="40" data-service="onetime" data-sqft="under"/>
-                                            <label class="flex-1">🪟 Dust Shutters <span class="text-xs text-gray-500 block">Feather dust under 2500 sf</span></label>
-                                            <span class="font-medium">$40.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="60" data-service="onetime" data-sqft="over"/>
-                                            <label class="flex-1">🪟 Dust Shutters <span class="text-xs text-gray-500 block">Feather dust over 2500 sf</span></label>
-                                            <span class="font-medium">$60.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="45" data-service="onetime"/>
-                                            <label class="flex-1">🧊 Inside Refrigerator <span class="text-xs text-gray-500 block">Clean inside of fridge (not freezer)</span></label>
-                                            <span class="font-medium">$45.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="15" data-service="onetime"/>
-                                            <label class="flex-1">🛋 Vacuum Couch <span class="text-xs text-gray-500 block">Top and underneath (1 couch + 1 loveseat or 1 sectional)</span></label>
-                                            <span class="font-medium">$15.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="10" data-service="onetime"/>
-                                            <label class="flex-1">🌀 Dusting High Ceiling Fan <span class="text-xs text-gray-500 block">Dusting ceiling fans over 10ft</span></label>
-                                            <span class="font-medium">$10.00</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Move In / Move Out -->
-                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                            <button onclick="toggleDropdown('moveout-dropdown', this)"
-                                class="w-full flex justify-between items-center p-5 font-semibold hover:bg-gray-50 transition">
-                                <div>
-                                    <p class="text-lg">Move In/Out Cleaning</p>
-                                    <p class="text-sm text-gray-500">Thorough cleaning for transitions</p>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <p id="moveout-price" class="font-bold text-xl text-primary">$175</p>
-                                    <i class="fas fa-chevron-down transition-transform text-gray-500"></i>
-                                </div>
-                            </button>
-                            <div id="moveout-dropdown" class="hidden bg-gray-50 px-5 pb-4 text-gray-700 space-y-3">
-                                <div class="pt-2">
-                                    <p class="font-medium text-gray-800 mb-3">Standard Cleaning Includes:</p>
-                                    <ul class="space-y-2 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Deep cleaning of all rooms</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Inside cabinets and closets</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Appliance interior cleaning</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Baseboard cleaning</li>
-                                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2 text-xs"></i> Window sills and tracks</li>
-                                    </ul>
-                                </div>
-                                <div class="pt-3">
-                                    <p class="font-medium text-gray-800 mb-3">Add‑On Services (<span class="count">0</span> selected):</p>
-                                    <ul class="grid grid-cols-1 gap-2 text-sm">
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="80" data-service="moveout"/>
-                                            <label class="flex-1">🗄️ Inside Kitchen/Bathroom Cabinets <span class="text-xs text-gray-500 block">Wiping out using micro fiber</span></label>
-                                            <span class="font-medium">$80.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="40" data-service="moveout"/>
-                                            <label class="flex-1">🔥 Oven Cleaning <span class="text-xs text-gray-500 block">Cleaning of 1 oven</span></label>
-                                            <span class="font-medium">$40.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="60" data-service="moveout" data-sqft="under"/>
-                                            <label class="flex-1">🧼 Hand Clean Baseboards <span class="text-xs text-gray-500 block">Hand wipe under 2500 sf</span></label>
-                                            <span class="font-medium">$60.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="80" data-service="moveout" data-sqft="over"/>
-                                            <label class="flex-1">🧼 Hand Clean Baseboards <span class="text-xs text-gray-500 block">Hand wipe over 2500 sf</span></label>
-                                            <span class="font-medium">$80.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="45" data-service="moveout"/>
-                                            <label class="flex-1">🧊 Inside Refrigerator <span class="text-xs text-gray-500 block">Clean inside of fridge (not freezer)</span></label>
-                                            <span class="font-medium">$45.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="40" data-service="moveout"/>
-                                            <label class="flex-1">🧽 Clean Exterior Kitchen/Bathroom Cabinets <span class="text-xs text-gray-500 block">Hand wipe all exterior upper and lower cabinets</span></label>
-                                            <span class="font-medium">$40.00</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <input type="checkbox" class="addon-checkbox mr-3 mt-1" data-price="75" data-service="moveout"/>
-                                            <label class="flex-1">🚪 Cleaning of Interior Doors/Frames <span class="text-xs text-gray-500 block">Hand wipe interior doors/frames/molding</span></label>
-                                            <span class="font-medium">$75.00</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Recurring Services -->
-                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                            <button onclick="toggleDropdown('recurring-dropdown', this)"
-                                class="w-full flex justify-between items-center p-5 font-semibold hover:bg-gray-50 transition">
-                                <div>
-                                    <p class="text-lg">Recurring Services</p>
-                                    <p class="text-sm text-gray-500">Save with regular cleaning</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform text-gray-500"></i>
-                            </button>
-                            <div id="recurring-dropdown" class="hidden bg-gray-50 px-5 pb-4 text-gray-700 space-y-4">
-                                <!-- Monthly -->
-                                <div class="pt-3">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <p class="font-medium">Monthly Cleaning</p>
-                                        <p id="monthly-price" class="font-bold text-primary">$119</p>
-                                    </div>
-                                    <p class="text-xs text-gray-500 mb-3">Includes 5% discount on standard cleaning</p>
-                                </div>
-                                
-                                <!-- Bi‑weekly -->
-                                <div class="pt-3">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <p class="font-medium">Bi‑weekly Cleaning</p>
-                                        <p id="biweekly-price" class="font-bold text-primary">$113</p>
-                                    </div>
-                                    <p class="text-xs text-gray-500 mb-3">Save 10‑15% per clean</p>
-                                </div>
-                                
-                                <!-- Weekly -->
-                                <div class="pt-3">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <p class="font-medium">Weekly Cleaning</p>
-                                        <p id="weekly-price" class="font-bold text-primary">$106</p>
-                                    </div>
-                                    <p class="text-xs text-gray-500">Save 15‑20% per clean</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        .area-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #EF4444;
-            cursor: pointer;
-        }
-        
-        .area-slider::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #EF4444;
-            cursor: pointer;
-        }
-        
-        .quantity-btn {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #F3F4F6;
-            color: #4B5563;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .quantity-btn:hover {
-            background: #E5E7EB;
-        }
-        
-        .toggle-checkbox {
-            display: none;
-        }
-        
-        .toggle-label {
-            display: inline-block;
-            width: 50px;
-            height: 26px;
-            background: #E5E7EB;
-            border-radius: 13px;
-            position: relative;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        
-        .toggle-label:after {
-            content: '';
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 20px;
-            height: 20px;
-            background: white;
-            border-radius: 50%;
-            transition: transform 0.2s;
-        }
-        
-        .toggle-checkbox:checked + .toggle-label {
-            background: #EF4444;
-        }
-        
-        .toggle-checkbox:checked + .toggle-label:after {
-            transform: translateX(24px);
-        }
-        
-        .addon-checkbox:checked {
-            accent-color: #EF4444;
-        }
-        
-        .service-radio-label {
-            display: block;
-            padding: 12px 16px;
-            border: 2px solid #E5E7EB;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .service-radio:checked + .service-radio-label {
-            border-color: #EF4444;
-            background-color: #FEE2E2;
-        }
-        
-        .service-radio:focus + .service-radio-label {
-            box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
-        }
-    </style>
-
-    <script>
-        // Pricing data
-        const pricingTable = {
-            1500: { base: 125, monthly: 119, biweekly: 113, weekly: 106, moveout: 175 },
-            2000: { base: 155, monthly: 147, biweekly: 140, weekly: 132, moveout: 215 },
-            2500: { base: 165, monthly: 157, biweekly: 149, weekly: 140, moveout: 235 },
-            3000: { base: 175, monthly: 166, biweekly: 158, weekly: 149, moveout: 255 },
-            3500: { base: 185, monthly: 176, biweekly: 167, weekly: 157, moveout: 275 },
-            4000: { base: 195, monthly: 185, biweekly: 176, weekly: 166, moveout: 295 },
-            4500: { base: 205, monthly: 195, biweekly: 185, weekly: 174, moveout: 315 }
-        };
-
-        // Room pricing
-        const roomPrices = {
-            bedroom: 25,
-            bathroom: 30,
-            kitchen: 40,
-            livingroom: 35
-        };
-
-        function updatePrices(area) {
-            const p = pricingTable[area];
-            document.getElementById('onetime-price').textContent = `$${p.base}`;
-            document.getElementById('moveout-price').textContent = `$${p.moveout}`;
-            document.getElementById('monthly-price').textContent = `$${p.monthly}`;
-            document.getElementById('biweekly-price').textContent = `$${p.biweekly}`;
-            document.getElementById('weekly-price').textContent = `$${p.weekly}`;
-            
-            // Update final prices in radio buttons
-            document.getElementById('onetime-final-price').textContent = `$${p.base}`;
-            document.getElementById('moveout-final-price').textContent = `$${p.moveout}`;
-            
-            // Update data attributes
-            document.getElementById('onetime-price').dataset.base = p.base;
-            document.getElementById('moveout-price').dataset.base = p.moveout;
-            document.getElementById('monthly-price').dataset.base = p.monthly;
-            document.getElementById('biweekly-price').dataset.base = p.biweekly;
-            document.getElementById('weekly-price').dataset.base = p.weekly;
-            
-            // Update sqft-dependent options
-            const sqftType = area < 2500 ? "under" : "over";
-            document.querySelectorAll(`[data-sqft]:not([data-sqft="${sqftType}"])`).forEach(el => {
-                el.disabled = true;
-                el.parentElement.style.opacity = "0.5";
-            });
-            document.querySelectorAll(`[data-sqft="${sqftType}"]`).forEach(el => {
-                el.disabled = false;
-                el.parentElement.style.opacity = "1";
-            });
-        }
-
-        function toggleDropdown(id, btn) {
-            const panel = document.getElementById(id);
-            const chevron = btn.querySelector('i.fas');
-            panel.classList.toggle('hidden');
-            chevron.classList.toggle('rotate-180');
-        }
-
-        function calculateTotal() {
-            const area = document.getElementById('area-slider').value;
-            const p = pricingTable[area];
-            
-            // Get room counts
-            const bedroomCount = parseInt(document.getElementById('bedroom-count').textContent);
-            const bathroomCount = parseInt(document.getElementById('bathroom-count').textContent);
-            const kitchenIncluded = document.getElementById('kitchen-toggle').checked;
-            const livingroomIncluded = document.getElementById('livingroom-toggle').checked;
-            
-            // Calculate base price adjustment
-            let roomAdjustment = 0;
-            roomAdjustment += (bedroomCount - 1) * roomPrices.bedroom;
-            roomAdjustment += (bathroomCount - 1) * roomPrices.bathroom;
-            if (!kitchenIncluded) roomAdjustment -= roomPrices.kitchen;
-            if (!livingroomIncluded) roomAdjustment -= roomPrices.livingroom;
-            
-            // Update prices for each service type
-            ['onetime', 'moveout', 'monthly', 'biweekly', 'weekly'].forEach(svc => {
-                const priceEl = document.getElementById(`${svc}-price`);
-                const base = parseInt(priceEl?.dataset.base, 10) || 0;
-                
-                // Calculate add-ons for this service type
-                let addonTotal = 0;
-                document.querySelectorAll(`.addon-checkbox[data-service="${svc}"]:checked`).forEach(checkbox => {
-                    addonTotal += parseInt(checkbox.dataset.price, 10);
-                });
-                
-                const total = Math.max(0, base + roomAdjustment + addonTotal);
-                if (priceEl) priceEl.textContent = `$${total}`;
-                
-                // Update count display
-                const dropdown = document.getElementById(`${svc}-dropdown`);
-                if (dropdown) {
-                    const count = dropdown.querySelectorAll(`.addon-checkbox[data-service="${svc}"]:checked`).length;
-                    dropdown.querySelector('.count').textContent = count;
-                }
-                
-                // Update final prices for radio buttons
-                if (svc === 'onetime') {
-                    document.getElementById('onetime-final-price').textContent = `$${total}`;
-                } else if (svc === 'moveout') {
-                    document.getElementById('moveout-final-price').textContent = `$${total}`;
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Area slider
-            const slider = document.getElementById('area-slider');
-            const disp = document.getElementById('area-display');
-            slider.addEventListener('input', e => {
-                const val = e.target.value;
-                disp.textContent = `${val} sq ft`;
-                updatePrices(val);
-                calculateTotal();
-            });
-            updatePrices(slider.value);
-
-            // Quantity buttons
-            document.querySelectorAll('.quantity-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const room = this.dataset.room;
-                    const countEl = document.getElementById(`${room}-count`);
-                    let count = parseInt(countEl.textContent);
-                    
-                    if (this.classList.contains('plus')) {
-                        count = Math.min(count + 1, 10);
-                    } else {
-                        count = Math.max(count - 1, 0);
-                    }
-                    
-                    countEl.textContent = count;
-                    calculateTotal();
-                });
-            });
-
-            // Toggle switches
-            document.querySelectorAll('.toggle-checkbox').forEach(checkbox => {
-                checkbox.addEventListener('change', calculateTotal);
-            });
-
-            // Add-on checkboxes
-            document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
-                checkbox.addEventListener('change', calculateTotal);
-            });
-
-            // Service type radio buttons
-            document.querySelectorAll('.service-radio').forEach(radio => {
-                radio.addEventListener('change', function() {
-                    document.querySelectorAll('.service-radio-label').forEach(label => {
-                        label.classList.remove('border-red-500', 'bg-red-50');
-                    });
-                    if (this.checked) {
-                        this.nextElementSibling.classList.add('border-red-500', 'bg-red-50');
-                    }
-                });
-            });
-
-            // Book Now button
-            document.getElementById('book-now-btn').addEventListener('click', function(e) {
-                e.preventDefault();
-                const selectedService = document.querySelector('input[name="service-type"]:checked').value;
-                
-                if (selectedService === 'recurring') {
-                    alert('Thank you for choosing recurring service! We will contact you to discuss the frequency.');
-                } else {
-                    alert(`Thank you for your booking! Total price: ${document.getElementById(`${selectedService}-final-price`).textContent}`);
-                }
-            });
-        });
-    </script>
-</section>
+                </script>
+            </section>
 
             <!-- Safety Priority Section -->
             <section id="safety-section" class="py-16 bg-gray-50">
@@ -1901,13 +1597,13 @@
 </footer>
 
 <!-- Floating Chat Button -->
-<div class="fixed bottom-6 right-6">
+<!-- <div class="fixed bottom-6 right-6">
     <button
         class="bg-[#0a0a0a] hover:bg-[#1a1a1a] text-white border border-[#d4af37] shadow-lg rounded-full w-14 h-14 flex items-center justify-center transition">
         <i class="fas fa-comment text-[#d4af37]"></i>
     </button>
-</div>
-<script>
+</div>-->
+<script> 
     // Toggle dropdown + set price
     function selectService(service, basePrice) {
         const area = parseInt(document.getElementById('area-slider').value);
@@ -1961,6 +1657,7 @@
         window.addEventListener('scroll', animateOnScroll);
     });
 </script>
+<script src="//code.tidio.co/mtmjz680hz0z8pmvoxegyppb6buca9qi.js" async></script>
 </body>
 
 </html>
