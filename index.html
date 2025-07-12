@@ -146,8 +146,8 @@
     <!-- why chooose us method -->
     <section class="py-16 bg-[#F1F5F9]" data-aos="fade-up">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Why Choose Us Over Others?</h2>
-        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-animate="fadeInUp">Why Choose Us Over Others?</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" >
             Discover what makes our cleaning service stand out from the competition.
         </p>
 
@@ -629,8 +629,8 @@
             <section id="pricing" class="py-16 bg-gray-50" data-aos="fade-up">
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Your Custom Quote</h2>
-                        <p class="text-gray-600 max-w-2xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-animate="fadeInUp">Get Your Custom Quote</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto" data-animate="fadeInUp" data-delay="0.2s">
                             This is just an estimate. Click BOOK NOW to tailor your cleaning. Remove rooms and areas to
                             lower your price and pay only for what we clean.
                         </p>
@@ -639,7 +639,7 @@
                     <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
                         <div class="md:flex">
                             <!-- Left panel -->
-                            <div class="md:w-1/2 p-8 md:p-10">
+                            <div class="md:w-1/2 p-8 md:p-10" data-animate="slideInLeft">
                                 <!-- Home Size Slider -->
                                 <div class="mb-10">
                                     <label class="block text-gray-700 text-lg font-semibold mb-4">Select Home Size (sq
@@ -759,7 +759,7 @@
                             </div>
 
                             <!-- Right panel -->
-                            <div class="md:w-1/2 bg-primary bg-opacity-5 p-8 md:p-10">
+                            <div class="md:w-1/2 bg-primary bg-opacity-5 p-8 md:p-10" data-animate="slideInRight">
                                 <h3 class="text-2xl font-bold mb-8 text-center text-gray-800">Your Custom Quote</h3>
                                 <div class="space-y-6">
                                     <!-- One‑time -->
@@ -1515,6 +1515,37 @@
                     }, { once: true });
                 });
             </script>
+            <script>
+  // Scroll animation handler
+  function handleScrollAnimations() {
+    const elements = document.querySelectorAll('[data-animate]');
+    const windowHeight = window.innerHeight;
+    const windowTop = window.scrollY;
+    const windowBottom = windowTop + windowHeight;
+
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top + windowTop;
+      const elementBottom = elementTop + element.offsetHeight;
+
+      // Check if element is in viewport
+      if (elementBottom >= windowTop && elementTop <= windowBottom) {
+        const animationType = element.getAttribute('data-animate');
+        const delay = element.getAttribute('data-delay') || '0';
+        
+        element.style.animationDelay = delay;
+        element.classList.add(`animate-${animationType}`);
+        element.style.opacity = '1'; // Make visible before animation starts
+        
+        // Remove attribute to prevent re-animation
+        element.removeAttribute('data-animate');
+      }
+    });
+  }
+
+  // Initialize on load and scroll
+  document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+  window.addEventListener('scroll', handleScrollAnimations);
+</script>
         </body>
 
 </html>
@@ -1676,14 +1707,14 @@
 <section id="testimonials" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied
+            <h2 class="text-3xl md:text-4xl font-bold mb-4" data-animate="fadeInUp">What Our Customers Say</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto" data-animate="fadeInUp" data-delay="0.2s">Don't just take our word for it - hear from our satisfied
                 customers</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <!-- Testimonial 1 -->
-            <div class="testimonial-card bg-white rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card bg-white rounded-xl p-6" data-animate="fadeInUp" data-delay="0.1s">
                 <div class="flex items-center mb-4">
                     <div
                         class="bg-primary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-1">
@@ -1708,7 +1739,7 @@
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="testimonial-card bg-white rounded-xl p-6">
+            <div class="testimonial-card bg-white rounded-xl p-6" data-animate="fadeInUp" data-delay="0.2s">
                 <div class="flex items-center mb-4">
                     <div
                         class="bg-secondary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-1">
@@ -1733,7 +1764,7 @@
             </div>
 
             <!-- Testimonial 3 -->
-            <div class="testimonial-card bg-white rounded-xl p-6">
+            <div class="testimonial-card bg-white rounded-xl p-6" data-animate="fadeInUp" data-delay="0.3s">
                 <div class="flex items-center mb-4">
                     <div
                         class="bg-accent w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-1">
@@ -2006,6 +2037,37 @@
     });
 </script>
 <script src="//code.tidio.co/mtmjz680hz0z8pmvoxegyppb6buca9qi.js" async></script>
+<script>
+  // Scroll animation handler
+  function handleScrollAnimations() {
+    const elements = document.querySelectorAll('[data-animate]');
+    const windowHeight = window.innerHeight;
+    const windowTop = window.scrollY;
+    const windowBottom = windowTop + windowHeight;
+
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top + windowTop;
+      const elementBottom = elementTop + element.offsetHeight;
+
+      // Check if element is in viewport
+      if (elementBottom >= windowTop && elementTop <= windowBottom) {
+        const animationType = element.getAttribute('data-animate');
+        const delay = element.getAttribute('data-delay') || '0';
+        
+        element.style.animationDelay = delay;
+        element.classList.add(`animate-${animationType}`);
+        element.style.opacity = '1'; // Make visible before animation starts
+        
+        // Remove attribute to prevent re-animation
+        element.removeAttribute('data-animate');
+      }
+    });
+  }
+
+  // Initialize on load and scroll
+  document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+  window.addEventListener('scroll', handleScrollAnimations);
+</script>
 </body>
 
 </html>
