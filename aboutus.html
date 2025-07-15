@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maids Of Cyfair - About Us</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-0 flex justify-between items-center flex-wrap">
+            <!-- Logo - Initially hidden -->
+            <div class="flex-shrink-0 mr-4">
+                <a href="/">
+                    <img id="headerLogo" src="black.png" alt="Maids of Cy-Fair Logo"
+                        class="h-20 w-auto opacity-0 transition-all duration-500 ease-in-out pointer-events-none">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="font-medium hover:text-primary transition">Services</a>
+                <a href="#pricing" class="font-medium hover:text-primary transition">Pricing</a>
+                <a href="#coverage" class="font-medium hover:text-primary transition">Coverage</a>
+                <a href="#testimonials" class="font-medium hover:text-primary transition">Testimonials</a>
+                <a href="./aboutus.html" class="font-medium hover:text-primary transition">About Us</a>
+                <a href="#footer" class="font-medium hover:text-primary transition">FAQ</a>
+                <a href="#footer" class="font-medium hover:text-primary transition">Contact</a>
+            </nav>
+
+            <!-- Right Side Desktop -->
+            <div class="hidden md:flex items-center space-x-6">
+                <button onclick="window.location.href='https://maidsofcyfair.com/book/'"
+                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition shadow-md">
+                    Book
+                </button>
+
+                <!-- Contact Info -->
+                <div class="text-sm text-right leading-tight">
+                    <div class="font-semibold">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maidsofcyfair@gmail.com" target="_blank"
+                            class="font-semibold text-blue-600 hover:underline">
+                            📧 maidsofcyfair@gmail.com
+                        </a>
+                    </div>
+                    <div class="text-gray-600">🕒 Mon–Fri: 8am – 6pm</div>
+                    <div class="text-gray-800 font-semibold">📞 (832) 727-0277</div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden ml-auto">
+                <button id="menuToggle" class="text-gray-800 focus:outline-none" aria-label="Toggle menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+            <a href="index.html#services" class="block py-2 font-medium hover:text-primary transition">Services</a>
+            <a href="index.html#pricing" class="block py-2 font-medium hover:text-primary transition">Pricing</a>
+            <a href="index.html#coverage" class="block py-2 font-medium hover:text-primary transition">Coverage</a>
+            <a href="index.html#testimonials" class="block py-2 font-medium hover:text-primary transition">Testimonials</a>
+            <a href="aboutus.html" class="block py-2 font-medium hover:text-primary transition">About Us</a>
+            <a href="index.html#footer" class="block py-2 font-medium hover:text-primary transition">FAQ</a>
+            <a href="index.html#footer" class="block py-2 font-medium hover:text-primary transition">Contact</a>
+
+
+            <div class="mt-4">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-phone text-primary mr-2"></i>
+                    <span class="font-semibold">(832) 727-0277</span>
+                </div>
+                <button
+                    class="bg-red-600 hover:bg-red-700 text-white w-full py-2 rounded-lg font-medium transition shadow-md">
+                    Book
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <img src="aboutusimage.png" alt="Mother and son playing with each other"
+            class="absolute inset-0 w-full h-[400px] object-cover object-center" style="object-position: 50% 30%;">
+
+        <!-- Light Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
+
+        <!-- Logo Over Image -->
+        <div class="absolute top-4 left-6 md:left-10 z-30">
+            <img src="black.png" alt="Maids of Cy-Fair Logo" class="h-20 md:h-36 w-auto" />
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container mx-auto px-4 flex flex-col items-center justify-center text-center relative z-20">
+            <div class="bg-black/20 p-8 rounded-lg">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-2 leading-tight font-['Montserrat'] drop-shadow-lg">
+                    About Us
+                </h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Logo visibility control
+            const headerLogo = document.getElementById('headerLogo');
+            const heroSection = document.getElementById('hero');
+
+            function updateLogoVisibility() {
+                const heroRect = heroSection.getBoundingClientRect();
+                const scrollPosition = window.scrollY;
+                const heroBottom = heroRect.bottom + scrollPosition;
+                
+                // Show logo when scrolled past 80% of hero section
+                if (window.scrollY > heroBottom * 0.8) {
+                    headerLogo.classList.remove('opacity-0', 'pointer-events-none');
+                    headerLogo.classList.add('opacity-100');
+                } else {
+                    headerLogo.classList.remove('opacity-100');
+                    headerLogo.classList.add('opacity-0', 'pointer-events-none');
+                }
+            }
+
+            // Initialize
+            updateLogoVisibility();
+            
+            // Event listeners
+            window.addEventListener('scroll', updateLogoVisibility);
+            window.addEventListener('resize', updateLogoVisibility);
+            
+            // Check again after everything loads
+            window.addEventListener('load', updateLogoVisibility);
+        });
+    </script>
+</body>
+</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#3b82f6',
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+</html>
