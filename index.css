@@ -2803,35 +2803,35 @@ video {
     }
 }
 
-@keyframes bgSlide {
-
-    0%,
-    16% {
-        background-image: url('one.jpeg');
-    }
-
-    17%,
-    34% {
-        background-image: url('two.jpg');
-    }
-
-    35%,
-    50% {
-        background-image: url('three.jpg');
-    }
-    51%,
-    67% {
-        background-image: url('four.jpg');
-    }
-    68%,
-    84% {
-        background-image: url('five.jpg');
-    }
-    85%,
-    100% {
-        background-image: url('six.jpeg');
-    }
+/* New Animations for the slideshow */
+@keyframes fadeAnimation {
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    25% { opacity: 1; }
+    33% { opacity: 0; }
+    100% { opacity: 0; }
 }
+
+.slideshow-image {
+    animation: fadeAnimation 20s infinite;
+}
+
+.slideshow-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slideshow-image:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slideshow-image:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.slideshow-image:nth-child(4) {
+    animation-delay: 15s;
+}
+/* ^^^^^^^^^^ New Animations for the slideshow ^^^^^^^^^^ */
 
   /* Fade-in animation */
   @keyframes fadeIn {
