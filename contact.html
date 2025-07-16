@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Maids of Cy‑Fair</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Maids of Cy-Fair</title>
 
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
 </head>
+<body class="font-sans bg-gray-50 text-gray-800">
 
 <body class="font-sans bg-gray-50 text-gray-800">
     <!-- ▸▸▸ HEADER (as provided) ◂◂◂ -->
@@ -88,114 +89,72 @@
         </div>
     </header>
 
+  <!-- 🔹 Main Content -->
 
-        <!-- Hero / Banner -->
-        <section class="relative h-64 md:h-80 bg-center bg-cover"
-                 style="background-image:url('hero-placeholder.jpg');">
-            <div class="absolute inset-0 bg-black/50"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                    Book. Clean. Relax.
-                </h1>
-                <p class="text-white text-lg max-w-xl">
-                    Professional, reliable cleaning services for Cypress‑Fairbanks and surrounding areas.
-                </p>
+
+    <!-- Contact Info + Form -->
+    <section class="py-16 px-4 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Left Column - Contact Info -->
+      <div>
+        <h2 class="text-2xl font-bold mb-6">📞 Contact Details</h2>
+        <p class="mb-4 text-lg"><strong>Phone:</strong> <a href="tel:8327270277" class="text-blue-600 hover:underline">(832) 727-0277</a></p>
+        <p class="mb-8 text-lg"><strong>Email:</strong> <a href="mailto:maidsofcyfair@gmail.com" class="text-blue-600 hover:underline">maidsofcyfair@gmail.com</a></p>
+
+        <h3 class="text-xl font-semibold mb-4">📅 Book an appointment in less than 1 minute</h3>
+        <p class="mb-6">Book your a’ la carte appointment now!</p>
+        <a href="https://maidsofcyfair.com/book/" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg">
+          Book Now
+        </a>
+      </div>
+
+      <!-- Right Column - Contact Form -->
+      <div>
+        <h2 class="text-2xl font-bold mb-6">✉️ Send us a message</h2>
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="First Name *" required class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" />
+            <input type="text" placeholder="Last Name *" required class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" />
+          </div>
+          <input type="email" placeholder="Email *" required class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" />
+          <textarea placeholder="Comment or Message" rows="5" required class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+          <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium shadow-md">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-white py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-center">Why Choose Us?</h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
+            <div class="text-red-600 text-4xl mb-4">
+              <i class="fas fa-user-shield"></i>
             </div>
-        </section>
-
-        <!-- About Us Text -->
-        <section id="about" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-3xl font-bold mb-6 text-center">About Us</h2>
-
-                <p class="mb-4">
-                    Welcome! I’m <strong>Landis</strong> — a mother, wife, and hardworking professional who understands
-                    the challenges of balancing a busy life. In today’s fast‑paced world, I often find myself cleaning
-                    during my spare time, knowing those hours could be spent more productively elsewhere. I also
-                    recognize the value of hard‑earned money and believe no one should be taken advantage of when it
-                    comes to essential services.
-                </p>
-
-                <p class="mb-4">
-                    That’s why I founded <strong>Maids of Cy‑Fair</strong>, built on integrity, fair pricing, and a
-                    commitment to excellence. I prioritize strong relationships with my customers, offering dedicated
-                    service, open communication, and honest business practices. My goal is to establish a trustworthy
-                    presence in the Cypress‑Fairbanks community, working alongside clients to meet their cleaning needs.
-                </p>
-
-                <p class="mb-4">
-                    Time is precious, and my mission is to help lighten your workload with affordable, high‑quality
-                    cleaning services — giving you more time to spend with loved ones or simply enjoy life. I look
-                    forward to connecting with you soon!
-                </p>
-
-                <p class="italic">Blessings,<br />Landis</p>
+            <h3 class="font-semibold text-xl mb-2">Safe</h3>
+            <p>We’re insured and all our cleaners undergo stringent background checks.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
+            <div class="text-red-600 text-4xl mb-4">
+              <i class="fas fa-comments"></i>
             </div>
-        </section>
-
-        <!-- Why Choose Us -->
-        <section id="why" class="bg-white py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-10 text-center">Why Choose Us?</h2>
-
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Easy -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Easy</h3>
-                        <p>Online communication is seamless — it only takes one minute to book.</p>
-                    </div>
-
-                    <!-- Trust -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Trust</h3>
-                        <p>We rigorously vet <strong>all</strong> of our cleaners through background checks.</p>
-                    </div>
-
-                    <!-- Affordable -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Affordable</h3>
-                        <p>Premium cleaning at a price that fits your budget.</p>
-                    </div>
-
-                    <!-- Safe -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Safe</h3>
-                        <p>We’re fully insured, and every cleaner is background‑checked.</p>
-                    </div>
-
-                    <!-- Seamless communication -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Seamless communication</h3>
-                        <p>We’re available 24/7 online — whatever you need, whenever you need it.</p>
-                    </div>
-
-                    <!-- Flexible -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Flexible</h3>
-                        <p>Need special accommodation or a reschedule? We’re happy to work with you.</p>
-                    </div>
-                </div>
+            <h3 class="font-semibold text-xl mb-2">Seamless Communication</h3>
+            <p>We’re available 24/7 through online communication: Whatever. Whenever.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
+            <div class="text-red-600 text-4xl mb-4">
+              <i class="fas fa-sync-alt"></i>
             </div>
-        </section>
-    </main>
+            <h3 class="font-semibold text-xl mb-2">Flexible</h3>
+            <p>Need special accommodation? Do you need a reschedule? Don’t worry – we’re here to work with you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
 
     <!-- ▸▸▸ FOOTER (as provided) ◂◂◂ -->
     <footer id="footer" class="bg-[#000000] text-white py-12">
@@ -279,23 +238,30 @@
     </footer>
 
     <!-- ▸▸▸ SCRIPTS ◂◂◂ -->
-    <script>
-        /* Mobile menu toggle */
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
 
-        /* Fade-in logo when scrolling */
-        const headerLogo = document.getElementById('headerLogo');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                headerLogo.classList.remove('opacity-0', 'pointer-events-none');
-            } else {
-                headerLogo.classList.add('opacity-0', 'pointer-events-none');
-            }
-        });
     </script>
+
+  <!-- 🔹 Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Header logo fade
+    const headerLogo = document.getElementById('headerLogo');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        headerLogo?.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        headerLogo?.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+  </script>
+
 </body>
 </html>

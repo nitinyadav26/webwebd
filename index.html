@@ -594,582 +594,343 @@
                 transition: all 0.3s ease;
             }
         </style>
-        <section id="pricing" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Starting Quote</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                This is just an estimate. Click BOOK NOW to tailor your cleaning. Remove rooms and areas to
-                lower your price and pay only for what we clean.
-            </p>
-        </div>
 
-        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg">
-            <div class="md:flex">
-                <!-- Left panel -->
-                <div class="md:w-1/2 p-8">
-                    <!-- Home Size Slider -->
-                    <div class="mb-8">
-                        <label class="block text-gray-700 mb-2 font-medium">Select Home Size (sq ft)</label>
-                        <div class="relative">
-                            <input id="area-slider" type="range" min="1500" max="4500" step="500" value="2000"
-                                class="area-slider w-full" />
-                            <div class="flex justify-between text-xs text-gray-500 mt-1">
-                                <span>1500</span><span>2000</span><span>2500</span><span>3000</span><span>3500</span><span>4000</span><span>4500+</span>
-                            </div>
-                        </div>
-                        <div class="mt-4 text-center">
-                            <p id="area-display" class="text-2xl font-bold text-primary">2000 sq ft</p>
-                        </div>
-                    </div>
+<!-- =================================================
+     Cleaning Service Pricing  –  16 Jul 2025
+     ================================================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-                    <!-- Book Now -->
-                    <div class="mt-8">
-                        <button id="book-now-btn"
-                            class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-bold transition shadow-lg text-lg">
-                            Book Now
-                        </button>
-                    </div>
-                </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleaning Service Pricing</title>
 
-                <!-- Right panel -->
-                <div class="md:w-1/2 bg-primary bg-opacity-5 p-8 flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold mb-6 text-center">Starting Quote</h3>
-                    <div class="space-y-4">
-
-                        <!-- One‑time -->
-                        <div class="border-b border-gray-200">
-                            <button onclick="toggleDropdown('onetime-dropdown', this)"
-                                class="w-full flex justify-between items-center py-3 font-semibold">
-                                <div>
-                                    <p class="text-left">One‑time</p>
-                                    <p class="text-xs text-gray-500">Base price + add-ons</p>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <p id="onetime-price" class="font-bold" data-base="160">$160</p>
-                                    <i class="fas fa-chevron-down transition-transform"></i>
-                                </div>
-                            </button>
-                            <div id="onetime-dropdown" class="hidden mt-2 pl-4 text-gray-700 space-y-2">
-                                <p class="text-sm font-medium mb-2">Included in base price:</p>
-                                <ul class="grid grid-cols-1 gap-1 mb-4">
-                                    <li class="flex items-center text-gray-500"><span class="mr-2">✓</span><label class="flex-1">Basic Cleaning <span class="text-sm">Standard surfaces and floors</span></label></li>
-                                    <li class="flex items-center text-gray-500"><span class="mr-2">✓</span><label class="flex-1">Bathroom Cleaning <span class="text-sm">All bathroom surfaces</span></label></li>
-                                    <li class="flex items-center text-gray-500"><span class="mr-2">✓</span><label class="flex-1">Kitchen Cleaning <span class="text-sm">Countertops and appliances</span></label></li>
-                                </ul>
-                                
-                                <p class="text-sm font-medium mb-2">Optional Add-ons:</p>
-                                <ul class="grid grid-cols-1 gap-1">
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="10"/><label class="flex-1">Blinds <span class="text-sm text-gray-500">Feather dusting only</span></label><span class="font-medium">$10.00</span></li>
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="20"/><label class="flex-1">Oven Cleaning <span class="text-sm text-gray-500">Cleaning of 1 Oven</span></label><span class="font-medium">$20.00</span></li>
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="30"/><label class="flex-1">Dust Baseboards <span class="text-sm text-gray-500">Feather dusting</span></label><span class="font-medium">$30.00</span></li>
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="45"/><label class="flex-1">Inside Refrigerator <span class="text-sm text-gray-500">Clean inside of Fridge</span></label><span class="font-medium">$45.00</span></li>
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="15"/><label class="flex-1">Vacuum Couch <span class="text-sm text-gray-500">Top and Underneath</span></label><span class="font-medium">$15.00</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Move In / Move Out -->
-                        <div class="border-b border-gray-200">
-                            <button onclick="toggleDropdown('moveout-dropdown', this)"
-                                class="w-full flex justify-between items-center py-3 font-semibold">
-                                <div>
-                                    <p>Move In / Move Out</p>
-                                    <p class="text-xs text-gray-500 text-left">Base price + add-ons</p>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <p id="moveout-price" class="font-bold" data-base="210">$210</p>
-                                    <i class="fas fa-chevron-down transition-transform"></i>
-                                </div>
-                            </button>
-                            <div id="moveout-dropdown" class="hidden mt-2 pl-4 text-gray-700 space-y-2">
-                                <p class="text-sm font-medium mb-2">Included in base price:</p>
-                                <ul class="grid grid-cols-1 gap-1 mb-4">
-                                    <li class="flex items-center text-gray-500"><span class="mr-2">✓</span><label class="flex-1">Inside Cabinets <span class="text-sm">Wiping out using micro fiber</span></label></li>
-                                    <li class="flex items-center text-gray-500"><span class="mr-2">✓</span><label class="flex-1">Hand Clean Baseboards <span class="text-sm">Hand wipe under 2500 sf</span></label></li>
-                                    <li class="flex items-center text-gray-500"><span class="mr-2">✓</span><label class="flex-1">Cleaning of Interior doors/frames <span class="text-sm">Hand wipe interior door/frames</span></label></li>
-                                </ul>
-                                
-                                <p class="text-sm font-medium mb-2">Optional Add-ons:</p>
-                                <ul class="grid grid-cols-1 gap-1">
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="20"/><label class="flex-1">Oven Cleaning <span class="text-sm text-gray-500">Cleaning of 1 Oven</span></label><span class="font-medium">$20.00</span></li>
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="45"/><label class="flex-1">Inside Refrigerator <span class="text-sm text-gray-500">Clean inside of Fridge</span></label><span class="font-medium">$45.00</span></li>
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="15"/><label class="flex-1">Vacuum Couch <span class="text-sm text-gray-500">Top and Underneath</span></label><span class="font-medium">$15.00</span></li>
-                                    <li class="flex items-center"><input type="checkbox" class="addon-checkbox mr-2" data-price="60"/><label class="flex-1">Dust Shutters <span class="text-sm text-gray-500">Feather Dust Over 2500 sf</span></label><span class="font-medium">$60.00</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Monthly -->
-                        <div class="border-b border-gray-200 py-3">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Monthly</p>
-                                    <p class="text-xs text-gray-500">Includes discounts</p>
-                                </div>
-                                <p id="monthly-price" class="font-bold text-xl">$155</p>
-                            </div>
-                        </div>
-
-                        <!-- Bi‑weekly -->
-                        <div class="border-b border-gray-200 py-3">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Bi‑weekly</p>
-                                    <p class="text-xs text-gray-500">Save 10‑15% per clean</p>
-                                </div>
-                                <p id="biweekly-price" class="font-bold text-xl">$145</p>
-                            </div>
-                        </div>
-
-                        <!-- Weekly -->
-                        <div class="py-3">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Weekly</p>
-                                    <p class="text-xs text-gray-500">Save 15‑20% per clean</p>
-                                </div>
-                                <p id="weekly-price" class="font-bold text-xl">$135</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    // Pricing data
-    const pricingTable = {
-        1500: { 
-            monthly: 125, 
-            biweekly: 125, 
-            weekly: 125,
-            onetime: 150,
-            moveout: 200
-        },
-        2000: { 
-            monthly: 155, 
-            biweekly: 145, 
-            weekly: 135,
-            onetime: 160,
-            moveout: 210
-        },
-        2500: { 
-            monthly: 165, 
-            biweekly: 155, 
-            weekly: 145,
-            onetime: 170,
-            moveout: 220
-        },
-        3000: { 
-            monthly: 175, 
-            biweekly: 165, 
-            weekly: 155,
-            onetime: 180,
-            moveout: 230
-        },
-        3500: { 
-            monthly: 185, 
-            biweekly: 175, 
-            weekly: 165,
-            onetime: 190,
-            moveout: 240
-        },
-        4000: { 
-            monthly: 195, 
-            biweekly: 185, 
-            weekly: 175,
-            onetime: 200,
-            moveout: 250
-        },
-        4500: { 
-            monthly: 205, 
-            biweekly: 195, 
-            weekly: 185,
-            onetime: 210,
-            moveout: 260
+  <!-- Icons & Tailwind -------------------------------->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#3b82f6' }
         }
+      }
+    }
+  </script>
+
+  <!-- Tiny helpers just for button feel --------------->
+  <style>
+    .btn-interactive {
+      @apply transition transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    }
+    .rotate-180 { transform: rotate(180deg); }
+    .service-item, .service-category { transition: all .3s ease; }
+  </style>
+</head>
+
+
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
+
+  <!-- =============  SERVICES  ============= -->
+  <!-- (unchanged markup trimmed for brevity; keep your existing Services grid here) -->
+
+
+  <!-- =============  PRICING  ============= -->
+  <section id="pricing" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Get Starting Quote</h2>
+        <br>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          This is just an estimate. Click BOOK NOW to tailor your cleaning.
+          Remove rooms and areas to lower your price and pay only for what we clean.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+
+          <!-- ---------- Left panel ----------------- -->
+          <div class="md:w-1/2 p-8">
+
+            <!-- STANDARD / DEEP toggle -->
+            <div class="flex justify-center space-x-4 mb-8">
+
+ 
+            </div>
+
+            <!-- Home-size slider -->
+            <label class="block text-gray-700 mb-2 font-medium">Select Home Size (sq ft)</label>
+            <input id="area-slider" type="range" min="1500" max="4500" step="500" value="2000"
+                   class="w-full accent-primary" />
+            <div class="flex justify-between text-xs text-gray-500 mt-1 select-none">
+              <span>1500</span><span>2000</span><span>2500</span><span>3000</span>
+              <span>3500</span><span>4000</span><span>4500+</span>
+            </div>
+            <p id="area-display" class="mt-4 text-center text-2xl font-bold text-primary">2000 sq ft</p>
+
+            <!-- Book now -->
+            <button id="book-now-btn"
+                    class="btn-interactive w-full mt-10 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-bold text-lg shadow-lg">
+              Book Now
+            </button>
+          </div>
+
+          <!-- ---------- Right panel ---------------- -->
+          <div class="md:w-1/2 bg-primary/5 p-8 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold mb-6 text-center">Starting Quote</h3>
+
+            <!-- One-time -------------------------------->
+            <div class="border-b border-gray-200">
+              <button onclick="toggleDropdown('onetime-dropdown',this)"
+                      class="w-full flex justify-between items-center py-3 font-semibold btn-interactive">
+                <div>
+                  <p>One-time</p>
+                  <p class="text-xs text-gray-500">Base price + add-ons</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p id="onetime-price" class="font-bold" data-base="200">$200</p>
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </button>
+              <div id="onetime-dropdown" class="hidden mt-2 pl-4 text-gray-700 space-y-2">
+                <p class="text-sm font-medium">Included in base price:</p>
+                <ul class="list-disc ml-6 mb-4 text-gray-500">
+                  <li>Basic Cleaning — standard surfaces & floors</li>
+                  <li>Bathroom Cleaning — all bathroom surfaces</li>
+                  <li>Kitchen Cleaning — countertops & appliances</li>
+                </ul>
+
+                <p class="text-sm font-medium">Optional add-ons:</p>
+                <ul class="space-y-1">
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="10" />
+                    <span class="flex-1">Blinds&nbsp;<small class="text-gray-500">(feather dusting)</small></span>
+                    <span class="font-medium">$10</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="40" />
+                    <span class="flex-1">Oven Cleaning</span>
+                    <span class="font-medium">$40</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="20" />
+                    <span class="flex-1">Dust Baseboards</span>
+                    <span class="font-medium">$20</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="45" />
+                    <span class="flex-1">Inside Refrigerator</span>
+                    <span class="font-medium">$45</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="15" />
+                    <span class="flex-1">Vacuum Couch</span>
+                    <span class="font-medium">$15</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Move-In / Move-Out --------------------->
+            <div class="border-b border-gray-200">
+              <button onclick="toggleDropdown('moveout-dropdown',this)"
+                      class="w-full flex justify-between items-center py-3 font-semibold btn-interactive">
+                <div>
+                  <p>Move In / Move Out</p>
+                  <p class="text-xs text-gray-500">Base price + add-ons</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p id="moveout-price" class="font-bold" data-base="210">$210</p>
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </button>
+              <div id="moveout-dropdown" class="hidden mt-2 pl-4 text-gray-700 space-y-2">
+                <p class="text-sm font-medium">Included in base price:</p>
+                <ul class="list-disc ml-6 mb-4 text-gray-500">
+                  <li>Inside cabinets</li>
+                  <li>Hand-clean baseboards (≤ 2500 sq ft)</li>
+                  <li>Interior doors & frames</li>
+                </ul>
+
+                <p class="text-sm font-medium">Optional add-ons:</p>
+                <ul class="space-y-1">
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="40" />
+                    <span class="flex-1">Oven Cleaning</span>
+                    <span class="font-medium">$40</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="45" />
+                    <span class="flex-1">Inside Refrigerator</span>
+                    <span class="font-medium">$45</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="15" />
+                    <span class="flex-1">Vacuum Couch</span>
+                    <span class="font-medium">$15</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="addon-checkbox mr-2" data-price="60" />
+                    <span class="flex-1">Dust Shutters</span>
+                    <span class="font-medium">$60</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Recurring -------------------------------->
+            <div class="border-b border-gray-200 py-3 flex justify-between items-center">
+              <div>
+                <p class="font-semibold">Monthly</p>
+                <p class="text-xs text-gray-500">Includes discounts</p>
+              </div>
+              <p id="monthly-price" class="font-bold text-xl">$155</p>
+            </div>
+
+            <div class="border-b border-gray-200 py-3 flex justify-between items-center">
+              <div>
+                <p class="font-semibold">Bi-weekly</p>
+                <p class="text-xs text-gray-500">Save 10-15 % per clean</p>
+              </div>
+              <p id="biweekly-price" class="font-bold text-xl">$145</p>
+            </div>
+
+            <div class="py-3 flex justify-between items-center">
+              <div>
+                <p class="font-semibold">Weekly</p>
+                <p class="text-xs text-gray-500">Save 15-20 % per clean</p>
+              </div>
+              <p id="weekly-price" class="font-bold text-xl">$135</p>
+            </div>
+          </div><!-- /right -->
+        </div><!-- /flex -->
+      </div><!-- /card -->
+    </div>
+  </section>
+
+
+  <!-- =============  JS LOGIC  ============= -->
+  <script>
+    /* ------------------------------------------
+       1.  PRICE TABLE  (from both Excel sheets)
+       ------------------------------------------ */
+    const pricingTable = {
+      1500: { monthly: 125, biweekly: 125, weekly: 125, onetime: 200, moveout: 200 },
+      2000: { monthly: 155, biweekly: 145, weekly: 135, onetime: 230, moveout: 230 },
+      2500: { monthly: 165, biweekly: 155, weekly: 145, onetime: 240, moveout: 240 },
+      3000: { monthly: 175, biweekly: 165, weekly: 155, onetime: 250, moveout: 250 },
+      3500: { monthly: 185, biweekly: 175, weekly: 165, onetime: 260, moveout: 260 },
+      4000: { monthly: 195, biweekly: 185, weekly: 175, onetime: 275, moveout: 275 },
+      4500: { monthly: 205, biweekly: 195, weekly: 185, onetime: 280, moveout: 280 }
     };
 
-    // Track selected add-ons
-    const selectedAddons = {
-        onetime: new Set(),
-        moveout: new Set()
-    };
+    /* ------------------------------------------
+       2.  STATE
+       ------------------------------------------ */
+    let selectedType = 'standard';        // 'standard' or 'deep'
+    const selectedAddons = { onetime: new Set(), moveout: new Set() };
+
+    /* ------------------------------------------
+       3.  HELPERS
+       ------------------------------------------ */
+    function updateServicePrice(service, base) {
+      const priceEl = document.getElementById(`${service}-price`);
+      let addOns = 0;
+      selectedAddons[service].forEach(p => addOns += +p);
+      priceEl.dataset.base = base;
+      priceEl.textContent = `$${(base + addOns)}`;
+    }
 
     function updatePrices(area) {
-    const p = pricingTable[area];
+      const p = pricingTable[area];
+      const multiplier = selectedType === 'deep' ? 1.4 : 1;
 
-    // Update recurring services
-    document.getElementById('monthly-price').textContent = `$${p.monthly}`;
-    document.getElementById('biweekly-price').textContent = `$${p.biweekly}`;
-    document.getElementById('weekly-price').textContent = `$${p.weekly}`;
+      // recurring
+      document.getElementById('monthly-price').textContent  = `$${Math.round(p.monthly  * multiplier)}`;
+      document.getElementById('biweekly-price').textContent = `$${Math.round(p.biweekly * multiplier)}`;
+      document.getElementById('weekly-price').textContent   = `$${Math.round(p.weekly   * multiplier)}`;
 
-    // --- FIX: update .dataset.base BEFORE calling updateServicePrice ---
-    const onetimeEl = document.getElementById('onetime-price');
-    const moveoutEl = document.getElementById('moveout-price');
-
-    onetimeEl.dataset.base = p.onetime;
-    moveoutEl.dataset.base = p.moveout;
-
-    // Now update text content using add-ons
-    updateServicePrice('onetime', p.onetime);
-    updateServicePrice('moveout', p.moveout);
-}
-
-
-    function updateServicePrice(serviceType, basePrice) {
-        const priceEl = document.getElementById(`${serviceType}-price`);
-        let addonTotal = 0;
-        
-        // Calculate add-ons total
-        selectedAddons[serviceType].forEach(price => {
-            addonTotal += parseFloat(price);
-        });
-        
-        // Update the element
-        priceEl.dataset.base = basePrice;
-        priceEl.textContent = `$${basePrice + addonTotal}`;
+      // one-time + moveout
+      const one = Math.round(p.onetime * multiplier);
+      const mov = Math.round(p.moveout * multiplier);
+      updateServicePrice('onetime', one);
+      updateServicePrice('moveout', mov);
     }
 
     function toggleDropdown(id, btn) {
-        const panel = document.getElementById(id);
-        const chevron = btn.querySelector('i.fas');
-        panel.classList.toggle('hidden');
-        chevron.classList.toggle('rotate-180');
+      const panel = document.getElementById(id);
+      const chev  = btn.querySelector('i');
+      panel.classList.toggle('hidden');
+      chev.classList.toggle('rotate-180');
     }
 
+    /* ------------------------------------------
+       4.  DOMContentLoaded
+       ------------------------------------------ */
     document.addEventListener('DOMContentLoaded', () => {
-        // Initialize Font Awesome
-        if (!document.querySelector('script[src*="fontawesome"]')) {
-            const faScript = document.createElement('script');
-            faScript.src = 'https://kit.fontawesome.com/yourcode.js';
-            faScript.crossOrigin = 'anonymous';
-            document.head.appendChild(faScript);
-        }
 
-        // Area slider
-        const slider = document.getElementById('area-slider');
-        const disp = document.getElementById('area-display');
-        
-        // Set initial values
-        updatePrices(slider.value);
-        
-        slider.addEventListener('input', e => {
-            const val = e.target.value;
-            disp.textContent = `${val} sq ft`;
-            updatePrices(val);
+      /* --- Slider & initial display ---------- */
+      const slider = document.getElementById('area-slider');
+      const areaDisp = document.getElementById('area-display');
+      updatePrices(slider.value);
+      slider.addEventListener('input', e => {
+        const val = +e.target.value;
+        areaDisp.textContent = `${val} sq ft`;
+        updatePrices(val);
+      });
+
+      /* --- Add-on checkboxes ----------------- */
+      document.querySelectorAll('.addon-checkbox').forEach(cb => {
+        cb.addEventListener('change', function () {
+          const box   = this;
+          const group = box.closest('[id$="-dropdown"]').id.replace('-dropdown', '');
+          if (box.checked) selectedAddons[group].add(box.dataset.price);
+          else             selectedAddons[group].delete(box.dataset.price);
+          updateServicePrice(group, +document.getElementById(`${group}-price`).dataset.base);
+        });
+      });
+
+      /* --- Standard / Deep buttons ----------- */
+      const stdBtn  = document.getElementById('standard-btn');
+      const deepBtn = document.getElementById('deep-btn');
+
+      function setType(type) {
+        selectedType = type;
+        stdBtn.classList.toggle('bg-primary text-white', type === 'standard');
+        stdBtn.classList.toggle('bg-gray-100 text-gray-700', type !== 'standard');
+        deepBtn.classList.toggle('bg-primary text-white', type === 'deep');
+        deepBtn.classList.toggle('bg-gray-100 text-gray-700', type !== 'deep');
+        updatePrices(+slider.value);
+      }
+      stdBtn.addEventListener('click', () => setType('standard'));
+      deepBtn.addEventListener('click', () => setType('deep'));
+
+      /* --- Book-now summary ------------------ */
+      document.getElementById('book-now-btn').addEventListener('click', () => {
+        const area = +slider.value;
+        let msg = `Booking Summary for ${area} sq ft (${selectedType} clean)\n\n`;
+
+        // one-time & moveout
+        ['onetime', 'moveout'].forEach(svc => {
+          const price = +document.getElementById(`${svc}-price`).textContent.replace('$', '');
+          if (price) msg += `${svc === 'onetime' ? 'One-time' : 'Move-In/Out'}: $${price}\n`;
         });
 
-        // Addon checkboxes
-        document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const serviceType = this.closest('[id$="-dropdown"]').id.replace('-dropdown', '');
-                const price = this.dataset.price;
-                
-                if (this.checked) {
-                    selectedAddons[serviceType].add(price);
-                } else {
-                    selectedAddons[serviceType].delete(price);
-                }
-                
-                // Get current base price
-                const basePrice = parseFloat(document.getElementById(`${serviceType}-price`).dataset.base);
-                updateServicePrice(serviceType, basePrice);
-            });
-        });
+        // recurring
+        msg += '\nRecurring Services:\n';
+        msg += `• Monthly  $${document.getElementById('monthly-price').textContent.replace('$','')}\n`;
+        msg += `• Bi-weekly  $${document.getElementById('biweekly-price').textContent.replace('$','')}\n`;
+        msg += `• Weekly  $${document.getElementById('weekly-price').textContent.replace('$','')}\n`;
 
-        // Book Now button
-        document.getElementById('book-now-btn').addEventListener('click', function() {
-            let message = "Your Booking Summary:\n\n";
-            let grandTotal = 0;
-            
-            // Get One-time total
-            const onetimeTotal = parseFloat(document.getElementById('onetime-price').textContent.replace('$', ''));
-            if (onetimeTotal > parseFloat(pricingTable[slider.value].onetime)) {
-                message += `One-time Services: $${onetimeTotal.toFixed(2)}\n`;
-                grandTotal += onetimeTotal;
-            }
-            
-            // Get Move Out total
-            const moveoutTotal = parseFloat(document.getElementById('moveout-price').textContent.replace('$', ''));
-            if (moveoutTotal > parseFloat(pricingTable[slider.value].moveout)) {
-                message += `Move In/Out Services: $${moveoutTotal.toFixed(2)}\n`;
-                grandTotal += moveoutTotal;
-            }
-            
-            // Get recurring service
-            const recurringServices = ['monthly', 'biweekly', 'weekly'];
-            recurringServices.forEach(svc => {
-                const price = parseFloat(document.getElementById(`${svc}-price`).textContent.replace('$', ''));
-                if (price > 0) {
-                    message += `${svc.charAt(0).toUpperCase() + svc.slice(1)}: $${price.toFixed(2)}\n`;
-                    if (svc === 'monthly') grandTotal += price;
-                    if (svc === 'biweekly') grandTotal += price * 2;
-                    if (svc === 'weekly') grandTotal += price * 4;
-                }
-            });
-            
-            message += `\nEstimated Total: $${grandTotal.toFixed(2)}`;
-            alert(message);
-        });
+        alert(msg);
+      });
     });
-</script>
-</section>
-        <!-- Safety Priority Section -->
-        <section id="safety-section" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <div class="relative rounded-xl overflow-hidden shadow-lg">
-                            <video class="w-full" muted playsinline loop id="safetyVideo" controls>
-                                <source src="three.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="absolute inset-0 flex items-center justify-center" id="playButtonOverlay">
-                                <button
-                                    class="bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full w-16 h-16 flex items-center justify-center transition">
-                                    <i class="fas fa-play text-primary text-xl"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Safety is Our Priority</h2>
-                        <p class="text-lg text-gray-600">
-                            That's why we use a professional color-coded cleaning program! Each towel and mop is
-                            designated
-                            for a specific area of your home, minimizing cross-contamination and maximizing hygiene.
-                            As the
-                            only cleaning service in the industry with this level of care, we ensure every room gets
-                            the
-                            attention it deserves — with the right tools for the job.
-                        </p>
-                        <div class="mt-6 bg-green-50 p-4 rounded-lg drop-shadow-md">
-                            <h3 class="font-bold mb-2">Standard Cleaning Covers:</h3>
-                            <div class="grid grid-cols-2 gap-2 text-sm">
-                                <div class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    <span>Kitchen surfaces & appliances</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    <span>Bathroom sanitization</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    <span>Bedroom dusting & tidying</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    <span>Living area surfaces</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Pricing section functionality
-                const areaSlider = document.getElementById('area-slider');
-                const areaDisplay = document.getElementById('area-display');
-                const standardBtn = document.getElementById('standard-btn');
-                const deepBtn = document.getElementById('deep-btn');
-
-                let selectedType = "standard"; // 'standard' or 'deep'
-
-                const pricingTable = {
-                    1500: { onetime: 0, moveout: 0, monthly: 125, biweekly: 125, weekly: 125 },
-                    2000: { onetime: 0, moveout: 0, monthly: 155, biweekly: 145, weekly: 135 },
-                    2500: { onetime: 0, moveout: 0, monthly: 165, biweekly: 155, weekly: 145 },
-                    3000: { onetime: 0, moveout: 0, monthly: 175, biweekly: 165, weekly: 155 },
-                    3500: { onetime: 0, moveout: 0, monthly: 185, biweekly: 175, weekly: 165 },
-                    4000: { onetime: 0, moveout: 0, monthly: 195, biweekly: 185, weekly: 175 },
-                    4500: { onetime: 0, moveout: 0, monthly: 205, biweekly: 195, weekly: 185 }
-                };
-
-                function updatePrices(area) {
-                    areaDisplay.textContent = `${area} sq ft`;
-                    const pricing = pricingTable[area] || { onetime: 125, moveout: 125, monthly: 125, biweekly: 125, weekly: 125 };
-
-                    const multiplier = selectedType === "deep" ? 1.4 : 1.0;
-
-                    document.getElementById('onetime-price').textContent = `$${Math.round(pricing.onetime * multiplier)}`;
-                    document.getElementById('moveout-price').textContent = `$${Math.round(pricing.moveout * multiplier)}`;
-                    document.getElementById('monthly-price').textContent = `$${Math.round(pricing.monthly * multiplier)}`;
-                    document.getElementById('biweekly-price').textContent = `$${Math.round(pricing.biweekly * multiplier)}`;
-                    document.getElementById('weekly-price').textContent = `$${Math.round(pricing.weekly * multiplier)}`;
-                }
-
-                // Slider change
-                areaSlider.addEventListener('input', () => {
-                    updatePrices(parseInt(areaSlider.value));
-                });
-
-                // Toggle cleaning type
-                standardBtn.addEventListener('click', () => {
-                    selectedType = "standard";
-                    standardBtn.classList.add("bg-blue-600", "text-white");
-                    standardBtn.classList.remove("bg-gray-100", "text-gray-700");
-
-                    deepBtn.classList.remove("bg-blue-600", "text-white");
-                    deepBtn.classList.add("bg-gray-100", "text-gray-700");
-
-                    updatePrices(parseInt(areaSlider.value));
-                });
-
-                deepBtn.addEventListener('click', () => {
-                    selectedType = "deep";
-                    deepBtn.classList.add("bg-blue-600", "text-white");
-                    deepBtn.classList.remove("bg-gray-100", "text-gray-700");
-
-                    standardBtn.classList.remove("bg-blue-600", "text-white");
-                    standardBtn.classList.add("bg-gray-100", "text-gray-700");
-
-                    updatePrices(parseInt(areaSlider.value));
-                });
-
-                // Tooltip functionality
-                const tooltipContainers = document.querySelectorAll('.tooltip-container');
-
-                // Mobile: Toggle tooltip on info icon click
-                tooltipContainers.forEach(container => {
-                    const infoIcon = container.querySelector('.info-icon');
-
-                    infoIcon.addEventListener('click', function (e) {
-                        e.stopPropagation();
-
-                        // Close all other tooltips
-                        tooltipContainers.forEach(t => {
-                            if (t !== container) {
-                                t.classList.remove('active');
-                            }
-                        });
-
-                        // Toggle current tooltip
-                        container.classList.toggle('active');
-                    });
-                });
-
-                // Close tooltips when clicking outside
-                document.addEventListener('click', function () {
-                    tooltipContainers.forEach(container => {
-                        container.classList.remove('active');
-                    });
-                });
-
-                // Close tooltips when tapping on mobile overlay
-                document.querySelectorAll('.tooltip-mobile-overlay').forEach(overlay => {
-                    overlay.addEventListener('click', function (e) {
-                        e.stopPropagation();
-                        this.closest('.tooltip-container').classList.remove('active');
-                    });
-                });
-
-                // Initial load
-                updatePrices(parseInt(areaSlider.value));
-
-                // Video section functionality
-                const video = document.getElementById('safetyVideo');
-                const playButton = document.getElementById('playButtonOverlay');
-                const section = document.getElementById('safety-section');
-
-                // Initial setup
-                video.muted = true;
-                video.loop = true;
-                video.playsInline = true;
-
-                // Function to try playing video
-                function tryPlayVideo() {
-                    const playPromise = video.play();
-                    if (playPromise !== undefined) {
-                        playPromise.then(() => {
-                            playButton.style.display = 'none';
-                        }).catch((error) => {
-                            // Show button if autoplay fails
-                            playButton.style.display = 'flex';
-                            console.log("Autoplay blocked:", error);
-                        });
-                    }
-                }
-
-                // Intersection Observer
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            tryPlayVideo();
-                        } else {
-                            video.pause();
-                        }
-                    });
-                }, {
-                    threshold: 0.5 // At least 50% of the section is visible
-                });
-
-                observer.observe(section);
-
-                // Play button manually enables sound + hides button
-                playButton.addEventListener('click', () => {
-                    video.muted = false;
-                    video.play().then(() => {
-                        playButton.style.display = 'none';
-                    }).catch(error => {
-                        console.log('Manual play failed:', error);
-                    });
-                });
-
-                // Hide button when playing
-                video.addEventListener('play', () => {
-                    playButton.style.display = 'none';
-                });
-
-                video.addEventListener('pause', () => {
-                    playButton.style.display = 'flex';
-                });
-
-                // Unmute on user interaction anywhere (once)
-                document.addEventListener('click', function enableSound() {
-                    video.muted = false;
-                    document.removeEventListener('click', enableSound);
-                }, { once: true });
-            });
-        </script>
-        <script>
-            // Scroll animation handler
-            function handleScrollAnimations() {
-                const elements = document.querySelectorAll('[data-animate]');
-                const windowHeight = window.innerHeight;
-                const windowTop = window.scrollY;
-                const windowBottom = windowTop + windowHeight;
-
-                elements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top + windowTop;
-                    const elementBottom = elementTop + element.offsetHeight;
-
-                    // Check if element is in viewport
-                    if (elementBottom >= windowTop && elementTop <= windowBottom) {
-                        const animationType = element.getAttribute('data-animate');
-                        const delay = element.getAttribute('data-delay') || '0';
-
-                        element.style.animationDelay = delay;
-                        element.classList.add(`animate-${animationType}`);
-                        element.style.opacity = '1'; // Make visible before animation starts
-
-                        // Remove attribute to prevent re-animation
-                        element.removeAttribute('data-animate');
-                    }
-                });
-            }
-
-            // Initialize on load and scroll
-            document.addEventListener('DOMContentLoaded', handleScrollAnimations);
-            window.addEventListener('scroll', handleScrollAnimations);
-        </script>
-    </body>
+  </script>
+</body>
+</html>
 
     </html>
 

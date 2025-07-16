@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Maids of Cy‑Fair</title>
-
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | Maids of Cy-Fair</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
 </head>
+<body class="font-sans bg-gray-50 text-gray-800">
 
 <body class="font-sans bg-gray-50 text-gray-800">
     <!-- ▸▸▸ HEADER (as provided) ◂◂◂ -->
@@ -89,113 +86,87 @@
     </header>
 
 
-        <!-- Hero / Banner -->
-        <section class="relative h-64 md:h-80 bg-center bg-cover"
-                 style="background-image:url('hero-placeholder.jpg');">
-            <div class="absolute inset-0 bg-black/50"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                    Book. Clean. Relax.
-                </h1>
-                <p class="text-white text-lg max-w-xl">
-                    Professional, reliable cleaning services for Cypress‑Fairbanks and surrounding areas.
-                </p>
-            </div>
-        </section>
+  <!-- Main FAQ Section -->
 
-        <!-- About Us Text -->
-        <section id="about" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-3xl font-bold mb-6 text-center">About Us</h2>
 
-                <p class="mb-4">
-                    Welcome! I’m <strong>Landis</strong> — a mother, wife, and hardworking professional who understands
-                    the challenges of balancing a busy life. In today’s fast‑paced world, I often find myself cleaning
-                    during my spare time, knowing those hours could be spent more productively elsewhere. I also
-                    recognize the value of hard‑earned money and believe no one should be taken advantage of when it
-                    comes to essential services.
-                </p>
+    <section class="py-16 px-4 max-w-4xl mx-auto">
+      <div class="space-y-6">
+        <button onclick="toggleFaq('faq1')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          📋 What’s Included in Each Cleaning?
+        </button>
+        <div id="faq1" class="hidden px-6 text-sm text-gray-700">
+          <ul class="list-disc list-inside mt-2">
+            <li>🧽 <strong>Standard Cleaning:</strong> Bathrooms, floors, counters, light dusting.</li>
+            <li>🧼 <strong>Deep Clean / Move-In/Out:</strong> Everything above + a la carte extras.</li>
+            <li>Customize your clean — skip rooms or add tasks.</li>
+          </ul>
+        </div>
 
-                <p class="mb-4">
-                    That’s why I founded <strong>Maids of Cy‑Fair</strong>, built on integrity, fair pricing, and a
-                    commitment to excellence. I prioritize strong relationships with my customers, offering dedicated
-                    service, open communication, and honest business practices. My goal is to establish a trustworthy
-                    presence in the Cypress‑Fairbanks community, working alongside clients to meet their cleaning needs.
-                </p>
+        <button onclick="toggleFaq('faq2')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          🧽 How Does It All Work?
+        </button>
+        <div id="faq2" class="hidden px-6 text-sm text-gray-700">
+          <ul class="list-disc list-inside mt-2">
+            <li>📟 Get a quote & book online</li>
+            <li>🧼 We bring all supplies</li>
+            <li>⏰ You get a 1-hour ETA</li>
+            <li>✅ We clean as per your request</li>
+            <li>💳 Pay securely after cleaning</li>
+          </ul>
+        </div>
 
-                <p class="mb-4">
-                    Time is precious, and my mission is to help lighten your workload with affordable, high‑quality
-                    cleaning services — giving you more time to spend with loved ones or simply enjoy life. I look
-                    forward to connecting with you soon!
-                </p>
+        <button onclick="toggleFaq('faq3')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          👥 How Many Cleaners Come?
+        </button>
+        <div id="faq3" class="hidden px-6 text-sm text-gray-700">
+          <p>Usually a 2-person team. Large jobs: 3. Small tasks: 1 cleaner.</p>
+        </div>
 
-                <p class="italic">Blessings,<br />Landis</p>
-            </div>
-        </section>
+        <button onclick="toggleFaq('faq4')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          ✅ Are You Insured and Background Checked?
+        </button>
+        <div id="faq4" class="hidden px-6 text-sm text-gray-700">
+          <ul class="list-disc list-inside mt-2">
+            <li>✅ Fully insured</li>
+            <li>✅ Background checked & vetted team</li>
+            <li>✅ Fluent in English and Spanish</li>
+          </ul>
+        </div>
 
-        <!-- Why Choose Us -->
-        <section id="why" class="bg-white py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-10 text-center">Why Choose Us?</h2>
+        <button onclick="toggleFaq('faq5')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          🚗 How Do You Arrive and When?
+        </button>
+        <div id="faq5" class="hidden px-6 text-sm text-gray-700">
+          <p>You’ll receive a 1-hour ETA. Our team arrives in personal vehicles and checks in through our system.</p>
+        </div>
 
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Easy -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Easy</h3>
-                        <p>Online communication is seamless — it only takes one minute to book.</p>
-                    </div>
+        <button onclick="toggleFaq('faq6')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          🧴 Do You Bring Supplies?
+        </button>
+        <div id="faq6" class="hidden px-6 text-sm text-gray-700">
+          <p>Yes! We bring eco-friendly products and pro tools. Let us know if you want us to use your supplies.</p>
+        </div>
 
-                    <!-- Trust -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Trust</h3>
-                        <p>We rigorously vet <strong>all</strong> of our cleaners through background checks.</p>
-                    </div>
+        <button onclick="toggleFaq('faq7')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          ❓ Other Questions
+        </button>
+        <div id="faq7" class="hidden px-6 text-sm text-gray-700">
+          <p>We’re happy to help. Reach out to us or book directly online.</p>
+        </div>
+      </div>
 
-                    <!-- Affordable -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Affordable</h3>
-                        <p>Premium cleaning at a price that fits your budget.</p>
-                    </div>
+      <!-- CTA -->
+      <div class="text-center mt-12 space-y-4">
+        <p class="text-gray-600">Still need help?</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <button onclick="scrollToTop()" class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">🔙 Back to Top</button>
+          <a href="https://maidsofcyfair.com/book/" target="_blank" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">💰 Get a Quote</a>
+          <a href="mailto:maidsofcyfair@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">💬 Contact Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                    <!-- Safe -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Safe</h3>
-                        <p>We’re fully insured, and every cleaner is background‑checked.</p>
-                    </div>
-
-                    <!-- Seamless communication -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Seamless communication</h3>
-                        <p>We’re available 24/7 online — whatever you need, whenever you need it.</p>
-                    </div>
-
-                    <!-- Flexible -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <div class="text-red-600 text-4xl mb-4">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Flexible</h3>
-                        <p>Need special accommodation or a reschedule? We’re happy to work with you.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <!-- ▸▸▸ FOOTER (as provided) ◂◂◂ -->
     <footer id="footer" class="bg-[#000000] text-white py-12">
@@ -279,23 +250,35 @@
     </footer>
 
     <!-- ▸▸▸ SCRIPTS ◂◂◂ -->
-    <script>
-        /* Mobile menu toggle */
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
 
-        /* Fade-in logo when scrolling */
-        const headerLogo = document.getElementById('headerLogo');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                headerLogo.classList.remove('opacity-0', 'pointer-events-none');
-            } else {
-                headerLogo.classList.add('opacity-0', 'pointer-events-none');
-            }
-        });
-    </script>
+</body>
+</html>
+
+  <script>
+    function toggleFaq(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    const headerLogo = document.getElementById('headerLogo');
+    window.addEventListener('scroll', () => {
+      if (headerLogo) {
+        if (window.scrollY > 50) {
+          headerLogo.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+          headerLogo.classList.add('opacity-0', 'pointer-events-none');
+        }
+      }
+    });
+  </script>
 </body>
 </html>
