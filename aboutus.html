@@ -15,78 +15,78 @@
 <body class="font-sans bg-gray-50 text-gray-800">
     <!-- ▸▸▸ HEADER (as provided) ◂◂◂ -->
     <header class="sticky top-0 z-50 bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-0 flex justify-between items-center flex-wrap">
-            <!-- Logo - Initially hidden -->
-            <div class="flex-shrink-0 mr-4">
-                <a href="/">
-                    <img id="headerLogo" src="black.png" alt="Maids of Cy-Fair Logo"
-                         class="h-20 w-auto opacity-0 transition-all duration-500 ease-in-out pointer-events-none">
-                </a>
-            </div>
+    <div class="container mx-auto px-4 py-0 flex justify-between items-center flex-wrap">
+        <!-- Logo - Initially hidden -->
+        <div class="flex-shrink-0 mr-4">
+            <a href="/">
+                <img id="headerLogo" src="black.png" alt="Maids of Cy-Fair Logo"
+                     class="h-20 w-auto opacity-0 transition-all duration-500 ease-in-out pointer-events-none">
+            </a>
+        </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="#services" class="font-medium hover:text-primary transition">Services</a>
-                <a href="#pricing" class="font-medium hover:text-primary transition">Pricing</a>
-                <a href="#coverage" class="font-medium hover:text-primary transition">Coverage</a>
-                <a href="#testimonials" class="font-medium hover:text-primary transition">Testimonials</a>
-                <a href="./aboutus.html" class="font-medium hover:text-primary transition">About Us</a>
-                <a href="#footer" class="font-medium hover:text-primary transition">FAQ</a>
-                <a href="#footer" class="font-medium hover:text-primary transition">Contact</a>
-            </nav>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="#services" class="font-medium hover:text-primary transition">Services</a>
+            <a href="#pricing" class="font-medium hover:text-primary transition">Pricing</a>
+            <a href="#coverage" class="font-medium hover:text-primary transition">Coverage</a>
+            <a href="#testimonials" class="font-medium hover:text-primary transition">Testimonials</a>
+            <a href="aboutus.html" class="font-medium hover:text-primary transition">About Us</a>
+            <a href="faq.html" class="font-medium hover:text-primary transition">FAQ</a>
+            <a href="contact.html" class="font-medium hover:text-primary transition">Contact</a>
+        </nav>
 
-            <!-- Right Side Desktop -->
-            <div class="hidden md:flex items-center space-x-6">
-                <button onclick="window.location.href='https://maidsofcyfair.com/book/'"
-                        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition shadow-md">
-                    Book
-                </button>
+        <!-- Right Side Desktop -->
+        <div class="hidden md:flex items-center space-x-6">
+            <button onclick="window.location.href='https://maidsofcyfair.com/book/'"
+                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition shadow-md">
+                Book
+            </button>
 
-                <!-- Contact Info -->
-                <div class="text-sm text-right leading-tight">
-                    <div class="font-semibold">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maidsofcyfair@gmail.com" target="_blank"
-                           class="font-semibold text-blue-600 hover:underline">
-                            📧 maidsofcyfair@gmail.com
-                        </a>
-                    </div>
-                    <div class="text-gray-600">🕒 Mon–Fri: 8 am – 6 pm</div>
-                    <div class="text-gray-800 font-semibold">📞 (832) 727‑0277</div>
+            <!-- Contact Info -->
+            <div class="text-sm text-right leading-tight">
+                <div class="font-semibold">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maidsofcyfair@gmail.com" target="_blank"
+                       class="font-semibold text-blue-600 hover:underline">
+                        📧 maidsofcyfair@gmail.com
+                    </a>
                 </div>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="md:hidden ml-auto">
-                <button id="menuToggle" class="text-gray-800 focus:outline-none" aria-label="Toggle menu">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <div class="text-gray-600">🕒 Mon–Fri: 8 am – 6 pm</div>
+                <div class="text-gray-800 font-semibold">📞 (832) 727‑0277</div>
             </div>
         </div>
 
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
-            <a href="#services" class="block py-2 font-medium hover:text-primary transition">Services</a>
-            <a href="#pricing" class="block py-2 font-medium hover:text-primary transition">Pricing</a>
-            <a href="#coverage" class="block py-2 font-medium hover:text-primary transition">Coverage</a>
-            <a href="#testimonials" class="block py-2 font-medium hover:text-primary transition">Testimonials</a>
-            <a href="./aboutus.html" class="block py-2 font-medium hover:text-primary transition">About Us</a>
-            <a href="#footer" class="block py-2 font-medium hover:text-primary transition">FAQ</a>
-            <a href="#footer" class="block py-2 font-medium hover:text-primary transition">Contact</a>
-
-            <div class="mt-4">
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-phone text-primary mr-2"></i>
-                    <span class="font-semibold">(832) 727‑0277</span>
-                </div>
-                <button onclick="window.location.href='https://maidsofcyfair.com/book/'"
-                        class="bg-red-600 hover:bg-red-700 text-white w-full py-2 rounded-lg font-medium transition shadow-md">
-                    Book
-                </button>
-            </div>
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden ml-auto">
+            <button id="menuToggle" class="text-gray-800 focus:outline-none" aria-label="Toggle menu">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-    </header>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+        <a href="#services" class="block py-2 font-medium hover:text-primary transition">Services</a>
+        <a href="#pricing" class="block py-2 font-medium hover:text-primary transition">Pricing</a>
+        <a href="#coverage" class="block py-2 font-medium hover:text-primary transition">Coverage</a>
+        <a href="#testimonials" class="block py-2 font-medium hover:text-primary transition">Testimonials</a>
+        <a href="./aboutus.html" class="block py-2 font-medium hover:text-primary transition">About Us</a>
+        <a href="./faq.html" class="block py-2 font-medium hover:text-primary transition">FAQ</a>
+        <a href="./contact.html" class="block py-2 font-medium hover:text-primary transition">Contact</a>
+
+        <div class="mt-4">
+            <div class="flex items-center mb-2">
+                <i class="fas fa-phone text-primary mr-2"></i>
+                <span class="font-semibold">(832) 727‑0277</span>
+            </div>
+            <button onclick="window.location.href='https://maidsofcyfair.com/book/'"
+                    class="bg-red-600 hover:bg-red-700 text-white w-full py-2 rounded-lg font-medium transition shadow-md">
+                Book
+            </button>
+        </div>
+    </div>
+</header>
 
 
         <!-- Hero / Banner -->
