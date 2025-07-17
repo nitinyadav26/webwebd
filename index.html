@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maids Of Cyfair - Book Now</title>
+    <title>Maids of Cy‑Fair  |  Home</title>
     <link rel="stylesheet" href="index.css">
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
@@ -66,13 +66,13 @@
 
         <!-- Mobile Dropdown Menu -->
         <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
-            <a href="#pricing" class="block py-2 font-medium hover:text-primary transition">Services</a>
+            <a href="#services" class="block py-2 font-medium hover:text-primary transition">Services</a>
             <a href="#pricing" class="block py-2 font-medium hover:text-primary transition">Pricing</a>
             <a href="#coverage" class="block py-2 font-medium hover:text-primary transition">Coverage</a>
             <a href="#testimonials" class="block py-2 font-medium hover:text-primary transition">Testimonials</a>
-            <a href="#footer" class="block py-2 font-medium hover:text-primary transition">About Us</a>
-            <a href="#footer" class="block py-2 font-medium hover:text-primary transition">FAQ</a>
-            <a href="#footer" class="block py-2 font-medium hover:text-primary transition">Contact</a>
+            <a href="./aboutus.html" class="block py-2 font-medium hover:text-primary transition">About Us</a>
+            <a href="./faq.html" class="block py-2 font-medium hover:text-primary transition">FAQ</a>
+            <a href="./contact.html" class="block py-2 font-medium hover:text-primary transition">Contact</a>
 
             <div class="mt-4">
                 <div class="flex items-center mb-2">
@@ -686,7 +686,7 @@
             <div class="border-b border-gray-200">
               <button onclick="toggleDropdown('onetime-dropdown',this)"
                       class="w-full flex justify-between items-center py-3 font-semibold btn-interactive">
-                <div>
+                <div class="text-left">
                   <p>One-time</p>
                   <p class="text-xs text-gray-500">Base price + add-ons</p>
                 </div>
@@ -738,7 +738,7 @@
             <div class="border-b border-gray-200">
               <button onclick="toggleDropdown('moveout-dropdown',this)"
                       class="w-full flex justify-between items-center py-3 font-semibold btn-interactive">
-                <div>
+                <div class="text-left">
                   <p>Move In / Move Out</p>
                   <p class="text-xs text-gray-500">Base price + add-ons</p>
                 </div>
@@ -798,13 +798,22 @@
               <p id="biweekly-price" class="font-bold text-xl">$145</p>
             </div>
 
-            <div class="py-3 flex justify-between items-center">
+            <div class="border-b border-gray-200 py-3 flex justify-between items-center">
               <div>
                 <p class="font-semibold">Weekly</p>
                 <p class="text-xs text-gray-500">Save 15-20 % per clean</p>
               </div>
               <p id="weekly-price" class="font-bold text-xl">$135</p>
             </div>
+
+            <div class="py-3 flex justify-between items-center">
+              <div>
+                <p class="font-semibold">Every 3 Weeks</p>
+                <p class="text-xs text-gray-500">Save 15-20 % per clean</p>
+              </div>
+              <p id="triweekly-price" class="font-bold text-xl">$150</p>
+            </div>
+            
           </div><!-- /right -->
         </div><!-- /flex -->
       </div><!-- /card -->
@@ -818,14 +827,15 @@
        1.  PRICE TABLE  (from both Excel sheets)
        ------------------------------------------ */
     const pricingTable = {
-      1500: { monthly: 125, biweekly: 125, weekly: 125, onetime: 200, moveout: 200 },
-      2000: { monthly: 155, biweekly: 145, weekly: 135, onetime: 230, moveout: 230 },
-      2500: { monthly: 165, biweekly: 155, weekly: 145, onetime: 240, moveout: 240 },
-      3000: { monthly: 175, biweekly: 165, weekly: 155, onetime: 250, moveout: 250 },
-      3500: { monthly: 185, biweekly: 175, weekly: 165, onetime: 260, moveout: 260 },
-      4000: { monthly: 195, biweekly: 185, weekly: 175, onetime: 275, moveout: 275 },
-      4500: { monthly: 205, biweekly: 195, weekly: 185, onetime: 280, moveout: 280 }
+        1500: { monthly: 125, biweekly: 125, weekly: 125, triweekly: 125, onetime: 200, moveout: 200 },
+        2000: { monthly: 155, biweekly: 145, weekly: 135, triweekly: 150, onetime: 230, moveout: 230 },
+        2500: { monthly: 165, biweekly: 155, weekly: 145, triweekly: 160, onetime: 240, moveout: 240 },
+        3000: { monthly: 175, biweekly: 165, weekly: 155, triweekly: 170, onetime: 250, moveout: 250 },
+        3500: { monthly: 185, biweekly: 175, weekly: 165, triweekly: 180, onetime: 260, moveout: 260 },
+        4000: { monthly: 195, biweekly: 185, weekly: 175, triweekly: 190, onetime: 275, moveout: 275 },
+        4500: { monthly: 205, biweekly: 195, weekly: 185, triweekly: 200, onetime: 280, moveout: 280 }
     };
+
 
     /* ------------------------------------------
        2.  STATE
@@ -845,19 +855,18 @@
     }
 
     function updatePrices(area) {
-      const p = pricingTable[area];
-      const multiplier = selectedType === 'deep' ? 1.4 : 1;
+        const p = pricingTable[area];
+        const multiplier = selectedType === 'deep' ? 1.4 : 1;
 
-      // recurring
-      document.getElementById('monthly-price').textContent  = `$${Math.round(p.monthly  * multiplier)}`;
-      document.getElementById('biweekly-price').textContent = `$${Math.round(p.biweekly * multiplier)}`;
-      document.getElementById('weekly-price').textContent   = `$${Math.round(p.weekly   * multiplier)}`;
+        document.getElementById('monthly-price').textContent   = `$${Math.round(p.monthly  * multiplier)}`;
+        document.getElementById('biweekly-price').textContent  = `$${Math.round(p.biweekly * multiplier)}`;
+        document.getElementById('weekly-price').textContent    = `$${Math.round(p.weekly   * multiplier)}`;
+        document.getElementById('triweekly-price').textContent = `$${Math.round(p.triweekly * multiplier)}`;  // Added line
 
-      // one-time + moveout
-      const one = Math.round(p.onetime * multiplier);
-      const mov = Math.round(p.moveout * multiplier);
-      updateServicePrice('onetime', one);
-      updateServicePrice('moveout', mov);
+        const one = Math.round(p.onetime * multiplier);
+        const mov = Math.round(p.moveout * multiplier);
+        updateServicePrice('onetime', one);
+        updateServicePrice('moveout', mov);
     }
 
     function toggleDropdown(id, btn) {
@@ -924,6 +933,7 @@
         msg += `• Monthly  $${document.getElementById('monthly-price').textContent.replace('$','')}\n`;
         msg += `• Bi-weekly  $${document.getElementById('biweekly-price').textContent.replace('$','')}\n`;
         msg += `• Weekly  $${document.getElementById('weekly-price').textContent.replace('$','')}\n`;
+        msg += `• Every 3 Weeks  $${document.getElementById('triweekly-price').textContent.replace('$','')}\n`;
 
         alert(msg);
       });
@@ -1078,23 +1088,40 @@
                 <div class="bg-white/60 text-gray-800 rounded-lg shadow-lg p-4 text-sm backdrop-blur-md">
                     <h3 class="text-lg font-bold mb-4 text-center">Check ZIP Availability</h3>
                     <div class="space-y-2">
-                        <input type="text" placeholder="Enter your ZIP/Postal Code"
+                        <input id="zip-input" type="text" placeholder="Enter your ZIP/Postal Code"
                             class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
-                        <button
+
+                        <button id="zip-check-btn"
                             class="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm transition font-bold">
                             Check
                         </button>
+
+                        <p id="zip-result" class="text-center mt-2 text-sm font-bold"></p>
+
                     </div>
                     <p class="text-center mt-2 text-gray-600 text-xs font-bold">We’ll instantly check if we service your
                         area.</p>
                 </div>
 
-                <!-- Google Map Embed (small version below ZIP checker) -->
-
             </div>
         </div>
 
-        <!-- Background Slideshow Keyframes -->
+        <script>
+            const servicedZips = ['77433', '77429', '77095', '77377', '77070', '77065'];
+
+            document.getElementById('zip-check-btn').addEventListener('click', () => {
+                const input = document.getElementById('zip-input').value.trim();
+                const result = document.getElementById('zip-result');
+
+                if (servicedZips.includes(input)) {
+                result.textContent = `Good news! We service your area!`;
+                result.className = "text-center mt-2 text-green-600 text-sm font-bold";
+                } else {
+                result.textContent = `Sorry, the location is outside of our service area.`;
+                result.className = "text-center mt-2 text-red-600 text-sm font-bold";
+                }
+            });
+        </script>
 
     </section>
 
@@ -1106,7 +1133,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-4" data-animate="fadeInUp">What Our Customers Say</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto" data-animate="fadeInUp" data-delay="0.2s">Don't just take our
                     word for it - hear from our satisfied
-                    customers</p>
+                    customers!</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -1127,11 +1154,11 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">"I've been using HoustonClean for the past year and they've been
+                    <p class="text-gray-600 mb-4">"I've been using Maids of Cyfair for the past year and they've been
                         amazing. My home has never been cleaner! The team is always punctual and thorough."</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <i class="fas fa-map-marker-alt mr-2"></i>
-                        <span>Galleria, Houston</span>
+                        <span>Bridgeland</span>
                     </div>
                 </div>
 
@@ -1156,7 +1183,7 @@
                         new home! Attention to detail was impressive. Will definitely use them again."</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <i class="fas fa-map-marker-alt mr-2"></i>
-                        <span>Midtown, Houston</span>
+                        <span>Towne Lake</span>
                     </div>
                 </div>
 
@@ -1178,11 +1205,11 @@
                         </div>
                     </div>
                     <p class="text-gray-600 mb-4">"As a busy professional, having a reliable cleaning service is
-                        essential. HoustonClean has been consistently excellent. Flexible scheduling and great results!"
+                        essential. Maids of Cyfair has been consistently excellent. Flexible scheduling and great results!"
                     </p>
                     <div class="flex items-center text-sm text-gray-500">
                         <i class="fas fa-map-marker-alt mr-2"></i>
-                        <span>Downtown, Houston</span>
+                        <span>Fairfield</span>
                     </div>
                 </div>
             </div>
@@ -1495,7 +1522,7 @@
                     </div>
 
                     <p class="text-gray-300 mb-4">
-                        Fully insured cleaners · Background checked · English speaking
+                        Fully insured cleaners · Background checked · English speaking ·
                         <br>Eco-friendly products · Satisfaction guaranteed
                     </p>
                     <div class="flex space-x-4">
@@ -1508,10 +1535,10 @@
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#pricing" class="text-gray-300 hover:text-white">Home</a></li>
-                        <li><a href="#pricing" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="#hero" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white">Services</a></li>
                         <li><a href="#pricing" class="text-gray-300 hover:text-white">Pricing</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Coverage Area</a></li>
+                        <li><a href="#coverage" class="text-gray-300 hover:text-white">Coverage Area</a></li>
                         <li><a href="#pricing" class="text-gray-300 hover:text-white">Book Online</a></li>
                     </ul>
                 </div>
@@ -1543,7 +1570,7 @@
             <div class="border-t border-gray-700 mt-8 pt-6">
                 <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-gray-400 text-sm">
                     <img src="logo.png" alt="Bottom Logo" class="h-10">
-                    <p>©2025 HoustonClean. All rights reserved.</p>
+                    <p>©2025 MaidsofCyfair. All rights reserved.</p>
                 </div>
             </div>
         </div>
