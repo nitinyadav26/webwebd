@@ -213,7 +213,7 @@
 </head>
 
 <body>
-    <!-- Pricing Section -->
+    <!-- Services Section -->
 
     <body class="bg-gray-50">
 
@@ -277,7 +277,7 @@
                                 </svg>
                                 <span class="text-gray-700">Stovetop cleaned</span>
                             </li>
-                            <div id="kitchen-extra" class="hidden pt-2 space-y-3">
+                            <div id="kitchen-extra" class="hidden space-y-3">
                                 <li class="flex items-center service-item">
                                     <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
@@ -356,7 +356,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span class="text-gray-700">Cleaning of tubs and showers</span>
+                                <span class="text-gray-700">Tubs and showers cleaned</span>
                             </li>
                                                         <li class="flex items-center service-item">
                                 <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24"
@@ -364,32 +364,16 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span class="text-gray-700">mopping of the floors</span>
+                                <span class="text-gray-700">Floors mopped</span>
                             </li>
-                                                        <li class="flex items-center service-item">
-                                <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span class="text-gray-700">Toilets scrubbed</span>
-                            </li>
-                            <li class="flex items-center service-item">
-                                <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span class="text-gray-700">Mirrors cleaned</span>
-                            </li>
-                            <div id="bathroom-extra" class="hidden pt-2 space-y-3">
+                            <div id="bathroom-extra" class="hidden space-y-3">
                                 <li class="flex items-center service-item">
                                     <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span class="text-gray-700">Showers and tubs cleaned</span>
+                                    <span class="text-gray-700">Toilets scrubbed</span>
                                 </li>
                                 <li class="flex items-center service-item">
                                     <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
@@ -397,7 +381,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span class="text-gray-700">Floors swept and mopped</span>
+                                    <span class="text-gray-700">Mirrors cleaned</span>
                                 </li>
                                 <li class="flex items-center service-item">
                                     <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
@@ -455,7 +439,7 @@
                                 </svg>
                                 <span class="text-gray-700">Beds tidied</span>
                             </li>
-                            <div id="bedroom-extra" class="hidden pt-2 space-y-3">
+                            <div id="bedroom-extra" class="hidden space-y-3">
 
                                 <li class="flex items-center service-item">
                                     <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
@@ -521,7 +505,7 @@
                                 </svg>
                                 <span class="text-gray-700">Light tidying (pillows, throws)</span>
                             </li>
-                            <div id="living-extra" class="hidden pt-2 space-y-3">
+                            <div id="living-extra" class="hidden space-y-3">
                                 <li class="flex items-center service-item">
                                     <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
@@ -592,23 +576,32 @@
         </script>
 
         <style>
-            .service-item {
-                transition: all 0.3s ease;
+            /* Restrict styles to #services section only */
+            #services .service-item {
+            transition: all 0.3s ease;
             }
 
-            .service-category {
-                transition: all 0.3s ease;
+            #services .grid {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 16px; 
+            }
+            #services .service-category {
+            flex: 1 0 300px; 
+            min-height: 300px; 
+            overflow: hidden;
+            transition: all 0.3s ease;
             }
 
-            .rotate-180 {
-                transform: rotate(180deg);
+            #services .rotate-180 {
+            transform: rotate(180deg);
             }
 
-            #kitchen-extra,
-            #bathroom-extra,
-            #bedroom-extra,
-            #living-extra {
-                transition: all 0.3s ease;
+            #services #kitchen-extra,
+            #services #bathroom-extra,
+            #services #bedroom-extra,
+            #services #living-extra {
+            transition: all 0.3s ease;
             }
         </style>
 <!-- =================================================
@@ -1577,7 +1570,7 @@
                         <br>Eco-friendly products · Satisfaction guaranteed
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/people/Maids-of-Cy-Fair/61551869414470/" class="text-gray-300 hover:text-[#d4af37]"> <i class="fab fa-facebook-f"> Facebook</i></a>
+                        <a href="https://www.facebook.com/people/Maids-of-Cy-Fair/61551869414470/" class="text-gray-300 hover:text-[#d4af37]"> <i class="fab fa-facebook-f">    Facebook</i></a>
                         <!-- <a href="https://www.facebook.com/people/Maids-of-Cy-Fair/61551869414470/" class="text-gray-300 hover:text-[#d4af37]">Facebook <i ></i></a> -->
                         <!-- <a href="#" class="text-gray-300 hover:text-[#d4af37]"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-300 hover:text-[#d4af37]"><i class="fab fa-twitter"></i></a> -->
