@@ -680,8 +680,9 @@
 
             <!-- Book now -->
             <button id="book-now-btn"
-                    class="btn-interactive w-full mt-10 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-bold text-lg shadow-lg">
+                    class="btn-interactive w-full mt-10 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-bold text-lg shadow-lg"             onclick="window.location.href='https://maidsofcyfair.com/book/'">
               Book Now
+              
             </button>
           </div>
 
@@ -979,7 +980,7 @@
         msg += `• Bi-weekly    ${document.getElementById('biweekly-price').textContent}\n`;
         msg += `• Weekly       ${document.getElementById('weekly-price').textContent}\n`;
         msg += `• Every 3 Wks  ${document.getElementById('triweekly-price').textContent}\n`;
-        alert(msg);
+        // alert(msg);
       });
     });
   </script>
