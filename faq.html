@@ -92,9 +92,21 @@
     <section class="py-16 px-4 max-w-4xl mx-auto">
       <div class="space-y-6">
         <button onclick="toggleFaq('faq1')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
-          📋 What’s Included in Each Cleaning?
+          ❌ What happens if I cancel or reschedule in less than 24 hours of the service appointment time range?
         </button>
         <div id="faq1" class="hidden px-6 text-sm text-gray-700">
+          <ul class="list-disc list-inside mt-2">
+            <p class="pb-2">We have a strict policy for cancelations in less than 24 hours of the service appointment time frame. Our team works incredibly hard to ensure each client is taken care of. This requires carefully planning the days ahead and unfortunately last minute cancelations or last minute rescheduling causes a big, negative, ripple effect throughout our current day and days ahead. In an effort to keep ALL customers happy, you will be charged a cancelation fee for last minute cancellations/rescheduling:</p>
+            
+            <li class="pb-1"><strong>Cancelations</strong> that are done in less than 24 hours of the service appointment time range will result in an <strong>automatic $100 cancelation fee.</strong></li>
+            <li><strong>Rescheduling</strong> appointments in less than 24 hours of the service appointment time range will result in an <strong>automatic $25 cancelation fee.</strong></li>
+          </ul>
+        </div>
+
+        <button onclick="toggleFaq('faq2')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          📋 What’s included in each cleaning?
+        </button>
+        <div id="faq2" class="hidden px-6 text-sm text-gray-700">
           <ul class="list-disc list-inside mt-2">
             <li>🧽 <strong>Standard Cleaning:</strong> Bathrooms, floors, counters, light dusting.</li>
             <li>🧼 <strong>One Time and Move-In/Out:</strong> Everything above + a la carte extras.</li>
@@ -102,10 +114,10 @@
           </ul>
         </div>
 
-        <button onclick="toggleFaq('faq2')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+        <button onclick="toggleFaq('faq3')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
           🧽 How Does It All Work?
         </button>
-        <div id="faq2" class="hidden px-6 text-sm text-gray-700">
+        <div id="faq3" class="hidden px-6 text-sm text-gray-700">
           <ul class="list-disc list-inside mt-2">
             <li>📟 Get a quote & book online</li>
             <li>🧼 We bring all supplies</li>
@@ -115,10 +127,10 @@
           </ul>
         </div>
 
-        <button onclick="toggleFaq('faq3')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+        <button onclick="toggleFaq('faq4')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
           👥 How Many Cleaners Come?
         </button>
-        <div id="faq3" class="hidden px-6 text-sm text-gray-700">
+        <div id="faq4" class="hidden px-6 text-sm text-gray-700">
           <p>Usually a 2-person team. Large jobs: 3.</p>
         </div>
 
@@ -134,10 +146,11 @@
         </div>
 
         <button onclick="toggleFaq('faq5')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
-          🚗 How Do You Arrive and When?
+          🚗 How and when do the cleaners arrive? Does booking an 8-10 am slot mean that the start time is 8 am?
         </button>
         <div id="faq5" class="hidden px-6 text-sm text-gray-700">
-          <p>We send out a 1-hour ETA text. Our team arrives in personal vehicles and checks in through our system.</p>
+          <p class="pb-1">We work off of 2-hour estimated time of arrival windows so that we can structure our day effectively. This allows us to get to the next client all while navigating Houston traffic and many other variables that take a toll on our time throughout the day (for example: Customer service add ons, eating and breaks!). Your scheduled time is an estimated time, not exact.</p>
+          <li>We send out a 1-hour ETA text. Our team arrives in personal vehicles and checks in through our system.</li>
         </div>
 
         <button onclick="toggleFaq('faq6')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
@@ -148,9 +161,72 @@
         </div>
 
         <button onclick="toggleFaq('faq7')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
-          ❓ Other Questions
+          💲 Will I ever be charged more than our agreed on quote?
         </button>
         <div id="faq7" class="hidden px-6 text-sm text-gray-700">
+          <p class="pb-1">Our initial estimates are based on historical data and typical requirements for similar properties. Nevertheless, unforeseen circumstances such as excessive wear and tear or unique cleaning challenges may arise, necessitating additional time and resources.</p>
+          <li>In such cases, we may need to implement a reasonable upcharge to cover the extra efforts put forth by our dedicated cleaning team at $40 each additional hour. We assure you that these instances are infrequent.</li>
+        </div>
+
+        <button onclick="toggleFaq('faq8')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          👎 What happens if a customer is not satisfied?
+        </button>
+        <div id="faq8" class="hidden px-6 text-sm text-gray-700">
+          <p>We have an AMAZING redo policy! If you are not completely satisfied – we’ll come back and redo any missed spots/areas completely free of charge, whenever you want!</p>
+        </div>
+
+        <button onclick="toggleFaq('faq9')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          💰 Do you offer any other discounts?
+        </button>
+        <div id="faq9" class="hidden px-6 text-sm text-gray-700">
+          <p class="pb-1">Yes!</p>
+          <li>We have Bi-weekly, Monthly, Every 3 Weeks and Weekly cleaning frequency discounts.</li>
+          <li>We have our one of a kind a la carte program, which allows you to customize your cleaning plan according to your specific needs without paying extra.</li>
+        </div>
+
+        <button onclick="toggleFaq('faq10')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          💬 Do you take special requests?
+        </button>
+        <div id="faq10" class="hidden px-6 text-sm text-gray-700">
+          <p>Yes we do! Whatever your needs are, don’t hesitate to reach out directly to us and we’ll see what we can do – we strive to use our resources and accommodate everyone and all jobs.</p>
+        </div>
+
+        <button onclick="toggleFaq('faq11')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          📅 Can I book a Bi-weekly/Monthly/Weekly cleaning just for the discount but get a One-Time cleaning using the frequency discount and cancel the service?
+        </button>
+        <div id="faq11" class="hidden px-6 text-sm text-gray-700">
+          <p>We offer Weekly, Bi-weekly, Every 3 Weeks and Monthly. If you cancel before completing two cleanings you will be charged $100.</p>
+        </div>
+
+        <button onclick="toggleFaq('faq12')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          🧹 Services we DO NOT offer.
+        </button>
+        <div id="faq12" class="hidden px-6 text-sm text-gray-700">
+          <li>Cleaning high to reach areas & windows</li>
+
+          <li>Washing exterior windows</li>
+
+          <li>Cleaning Walls</li>
+
+          <li>Organizing</li>
+
+          <li>Cleaning anything outside the home</li>
+
+          <li>Moving furniture over 20 lbs</li>
+
+          <li>Cleaning bio-hazards (mold, blood, bodily fluids)</li>
+
+          <li>Cleaning up animal waste</li>
+
+          <li>Cleaning cat litter box and on floor</li>
+
+          <li>Cleaning insects/rodents</li>
+        </div>
+
+        <button onclick="toggleFaq('faq13')" class="w-full text-left bg-white shadow px-6 py-4 rounded-lg hover:bg-gray-50 transition font-medium">
+          ❓ Other Questions
+        </button>
+        <div id="faq13" class="hidden px-6 text-sm text-gray-700">
           <p>We’re happy to help. Reach out to us or book directly online.</p>
         </div>
       </div>
