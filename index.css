@@ -2063,6 +2063,31 @@ video {
 .max-w-4xl {
     max-width: 56rem
 }
+/* ---------- tiny utilities ---------- */
+.nav-link       { @apply font-medium hover:text-primary transition; }
+.mobile-link    { @apply block py-2 font-medium hover:text-primary transition; }
+.btn-red        { @apply bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium shadow-md transition; }
+.btn-red-big    { @apply bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition transform hover:scale-105; }
+.rotate-180     { transform: rotate(180deg); }
+
+/* ---------- pricing‑calculator extras ---------- */
+.service-item, .service-category { transition: all .3s ease; }
+
+/* continuous testimonial and feature scroll */
+@keyframes testimonialScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.scrolling-testimonials       { animation:testimonialScroll 30s linear infinite; width:max-content; display:flex; }
+.scrolling-testimonials:hover { animation-play-state:paused; }
+
+@keyframes featureScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.scrolling-features       { animation:featureScroll 20s linear infinite; width:max-content; display:flex; }
+.scrolling-features:hover { animation-play-state:paused; }
+
+/* header logo fade‑in after hero */
+#headerLogo { transition:opacity .5s; }
+
+/* rotate utility already in Tailwind ^ but added for vanilla JS toggles */
+.rotate-180 { transform: rotate(180deg); }
+
 
 .max-w-6xl {
     max-width: 72rem
