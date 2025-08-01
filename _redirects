@@ -1,3 +1,4 @@
 # WordPress booking page
-/book        https://wp-origin.maidsofcyfair.com/book        200
-/book/*      https://wp-origin.maidsofcyfair.com/book/:splat 200
+/book        https://wp-origin.maidsofcyfair.com/book          200
+/book/       https://wp-origin.maidsofcyfair.com/book/         200
+/book/*      https://wp-origin.maidsofcyfair.com/book/:splat   200
