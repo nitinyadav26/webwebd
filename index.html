@@ -123,81 +123,10 @@
                 Get Your Free Quote Today
             </a>
 
-            <div class=" px-4 py-2 rounded-lg w-fit inline-block">
-                <!-- include fonts once in your <head> if not already present -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@500;700&display=swap"
-  rel="stylesheet">
-
-<!-- Award badge (replace the old sentence with this) -->
-<div id="awardBadgeInline"
-     class="inline-flex items-center space-x-3 bg-white border border-gray-200 rounded-full px-3 py-1 shadow-sm text-[11px] font-medium opacity-0 transform"
-     aria-label="Living Magazine Best of Maid/Cleaning Service in Cy-Fair Readers' Choice Award 2025"
-     style="font-family: 'Montserrat', system-ui, sans-serif;">
-  <div class="flex items-center space-x-2 text-gray-700">
-    <div class="flex flex-col leading-tight">
-      <span class="text-[10px] uppercase font-semibold" style="font-family: 'Playfair Display', serif;">
-        living
-      </span>
-      <span class="text-[7px] uppercase tracking-wider">magazine</span>
-    </div>
-    <div class="h-5 w-px bg-gray-300"></div>
-    <div class="text-[9px] italic font-medium">best of</div>
-  </div>
-
-  <div class="h-6 w-px bg-gray-300"></div>
-
-  <div class="flex flex-col text-left text-gray-800">
-    <div class="font-semibold leading-tight">Maid/Cleaning Service in Cy-Fair</div>
-    <div class="flex items-baseline gap-1 mt-0.5">
-      <div class="uppercase text-[7px] tracking-wider text-gray-500">Readers’ Choice</div>
-      <div class="text-sm font-bold text-green-600">2025</div>
-    </div>
-  </div>
-</div>
-
-<!-- Animation styles (put once globally if you prefer) -->
-<style>
-  @keyframes badgeIn {
-    0% { opacity: 0; transform: translateY(-4px) scale(0.97); }
-    60% { opacity: 1; transform: translateY(2px) scale(1.01); }
-    100% { opacity: 0; } /* final state overridden by JS to keep visible */
-  }
-  .animate-badge-enter {
-    animation: badgeIn 0.8s cubic-bezier(.22,.61,.36,1.01) forwards;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  /* subtle hover lift */
-  #awardBadgeInline:hover {
-    transform: translateY(-1px);
-    transition: transform .2s ease;
-  }
-</style>
-
-<!-- JS to trigger entrance (once when in view) -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const badge = document.getElementById('awardBadgeInline');
-    if (!badge) return;
-    // IntersectionObserver to animate when visible
-    const io = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          badge.classList.add('animate-badge-enter');
-          observer.unobserve(badge);
-        }
-      });
-    }, { threshold: 0.3 });
-    io.observe(badge);
-  });
-</script>
-
-                <!-- <p class="text-xl text-white font-['Open_Sans'] leading-tight">
+            <div class="bg-black/20 px-4 py-2 rounded-lg w-fit inline-block">
+                <p class="text-xl text-white font-['Open_Sans'] leading-tight">
                     A custom à la carte service – only pay for what we clean.
-                </p> -->
+                </p>
             </div>
         </div>
     </section>
