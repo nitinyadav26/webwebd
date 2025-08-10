@@ -164,7 +164,38 @@
   </div>
 </div>
 
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@500;700&display=swap');
+@keyframes badgeIn {
+  0%   { opacity: 0; transform: translateY(-4px) scale(0.97);}
+  60%  { opacity: 1; transform: translateY(2px) scale(1.01);}
+  100% { opacity: 1;}
+}
+#awardBadgeInline.animate-badge-enter {
+  animation: badgeIn 0.8s cubic-bezier(.22,.61,.36,1.01) forwards;
+  opacity: 1 !important;
+  transform: none !important;
+}
+#awardBadgeInline:hover {
+  transform: translateY(-2px) scale(1.03);
+  transition: transform .2s ease;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const badge = document.getElementById('awardBadgeInline');
+  if (!badge) return;
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        badge.classList.add('animate-badge-enter');
+        observer.unobserve(badge);
+      }
+    });
+  }, { threshold: 0.3 });
+  io.observe(badge);
+});
+</script>
 
         </div>
     </section>
@@ -177,7 +208,84 @@
         <!-- Your pricing section content here -->
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
+            // Logo visibility control
+            const headerLogo = document.getElementById('headerLogo');
+            const heroSection = document.getElementById('hero');
+
+            function updateLogoVisibility() {
+                const heroRect = heroSection.getBoundingClientRect();
+                const scrollPosition = window.scrollY;
+                const heroBottom = heroRect.bottom + scrollPosition;
+
+                // Show logo when scrolled past 80% of hero section
+                if (window.scrollY > heroBottom * 0.8) {
+                    headerLogo.classList.remove('opacity-0', 'pointer-events-none');
+                    headerLogo.classList.add('opacity-100');
+                } else {
+                    headerLogo.classList.remove('opacity-100');
+                    headerLogo.classList.add('opacity-0', 'pointer-events-none');
+                }
+            }
+
+            // Initialize
+            updateLogoVisibility();
+
+            // Event listeners
+            window.addEventListener('scroll', updateLogoVisibility);
+            window.addEventListener('resize', updateLogoVisibility);
+
+            // Check again after everything loads
+            window.addEventListener('load', updateLogoVisibility);
+        });
+    </script>
+</body>
+
+</html>
+<!-- JavaScript -->
+
+
+
+
+
+
+
+
+
+<!-- Pricing Calculator -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning Service Pricing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Services Section -->
+
+    <body class="bg-gray-50">
 
         <section id="services" class="py-20 bg-white text-gray-800" style="
     padding-bottom: 10px;
@@ -509,10 +617,95 @@
             </div>
         </section>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Set up event listeners for all see more buttons
+                const buttons = document.querySelectorAll('.see-more-btn');
 
+                buttons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const category = this.id.split('-')[0];
+                        const extraDiv = document.getElementById(`${category}-extra`);
+                        const icon = document.getElementById(`${category}-icon`);
+                        const textSpan = document.getElementById(`${category}-text`);
 
+                        if (extraDiv.classList.contains('hidden')) {
+                            // Show extra content
+                            extraDiv.classList.remove('hidden');
+                            textSpan.textContent = textSpan.textContent.replace('See all', 'See less');
+                            icon.classList.add('rotate-180');
+                        } else {
+                            // Hide extra content
+                            extraDiv.classList.add('hidden');
+                            textSpan.textContent = textSpan.textContent.replace('See less', 'See all');
+                            icon.classList.remove('rotate-180');
+                        }
+                    });
+                });
+            });
+        </script>
 
+        <style>
+            /* Restrict styles to #services section only */
+            #services .service-item {
+            transition: all 0.3s ease;
+            }
 
+            #services .grid {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 16px; 
+            }
+            #services .service-category {
+            flex: 1 0 300px; 
+            min-height: 300px; 
+            overflow: hidden;
+            transition: all 0.3s ease;
+            }
+
+            #services .rotate-180 {
+            transform: rotate(180deg);
+            }
+
+            #services #kitchen-extra,
+            #services #bathroom-extra,
+            #services #bedroom-extra,
+            #services #living-extra {
+            transition: all 0.3s ease;
+            }
+        </style>
+<!-- =================================================
+     Cleaning Service Pricing  –  20 Jul 2025  (updated)
+     ================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleaning Service Pricing</title>
+
+  <!-- Icons & Tailwind -------------------------------->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: { colors: { primary: '#3b82f6' } }
+      }
+    }
+  </script>
+
+  <!-- Tiny helpers just for button feel --------------->
+  <style>
+    .btn-interactive { @apply transition transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2; }
+    .rotate-180 { transform: rotate(180deg); }
+    .service-item, .service-category { transition: all .3s ease; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
 
 
   <!-- =============  PRICING  ============= -->
@@ -767,11 +960,173 @@
     </div>
   </section>
 
+  <!-- =============  JS LOGIC (unchanged)  ============= -->
+  <script>
+    /* ------------------------------------------
+       1.  PRICE TABLE
+       ------------------------------------------ */
+    const pricingTable = {
+      1500: { monthly: 125, biweekly: 125, weekly: 125, triweekly: 125, onetime: 200, moveout: 200 },
+      2000: { monthly: 155, biweekly: 145, weekly: 135, triweekly: 150, onetime: 230, moveout: 230 },
+      2500: { monthly: 165, biweekly: 155, weekly: 145, triweekly: 160, onetime: 240, moveout: 240 },
+      3000: { monthly: 175, biweekly: 165, weekly: 155, triweekly: 170, onetime: 250, moveout: 250 },
+      3500: { monthly: 185, biweekly: 175, weekly: 165, triweekly: 180, onetime: 260, moveout: 260 },
+      4000: { monthly: 195, biweekly: 185, weekly: 175, triweekly: 190, onetime: 275, moveout: 275 },
+      4500: { monthly: 205, biweekly: 195, weekly: 185, triweekly: 200, onetime: 280, moveout: 280 }
+    };
 
+    /* ------------------------------------------
+       2.  STATE
+       ------------------------------------------ */
+    let selectedType = 'standard';           // 'standard' or (commented-out) 'deep'
+    const selectedAddons = { onetime: new Set(), moveout: new Set() };
+
+    /* ------------------------------------------
+       3.  HELPERS
+       ------------------------------------------ */
+    function updateServicePrice(service, base) {
+      const priceEl = document.getElementById(`${service}-price`);
+      let addOns = 0;
+      selectedAddons[service].forEach(p => addOns += +p);
+      priceEl.dataset.base = base;
+      priceEl.textContent = `$${base + addOns}`;
+    }
+
+    function updatePrices(area) {
+      const p = pricingTable[area];
+      const multiplier = selectedType === 'deep' ? 1.4 : 1;
+
+      document.getElementById('monthly-price').textContent   = `$${Math.round(p.monthly  * multiplier)}`;
+      document.getElementById('biweekly-price').textContent  = `$${Math.round(p.biweekly * multiplier)}`;
+      document.getElementById('weekly-price').textContent    = `$${Math.round(p.weekly   * multiplier)}`;
+      document.getElementById('triweekly-price').textContent = `$${Math.round(p.triweekly * multiplier)}`;
+
+      updateServicePrice('onetime', Math.round(p.onetime * multiplier));
+      updateServicePrice('moveout', Math.round(p.moveout * multiplier));
+    }
+
+    function toggleDropdown(id, btn) {
+      const panel = document.getElementById(id);
+      const chev  = btn.querySelector('i');
+      panel.classList.toggle('hidden');
+      chev.classList.toggle('rotate-180');
+    }
+
+    /* ------------------------------------------
+       4.  DOMContentLoaded
+       ------------------------------------------ */
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* --- Slider & initial display ---------- */
+      const slider   = document.getElementById('area-slider');
+      const areaDisp = document.getElementById('area-display');
+      updatePrices(slider.value);
+      slider.addEventListener('input', e => {
+        const val = +e.target.value;
+        areaDisp.textContent = `${val} sq ft`;
+        updatePrices(val);
+      });
+
+      /* --- Add-on checkboxes ----------------- */
+      document.querySelectorAll('.addon-checkbox').forEach(cb => {
+        cb.addEventListener('change', function () {
+          const group = cb.closest('[id$="-dropdown"]').id.replace('-dropdown', '');
+          if (cb.checked) selectedAddons[group].add(cb.dataset.price);
+          else            selectedAddons[group].delete(cb.dataset.price);
+          updateServicePrice(group, +document.getElementById(`${group}-price`).dataset.base);
+        });
+      });
+
+      /* --- Book-now summary ------------------ */
+      document.getElementById('book-now-btn').addEventListener('click', () => {
+        const area = +slider.value;
+        let msg = `Booking Summary for ${area} sq ft\n\n`;
+        ['onetime','moveout'].forEach(svc => {
+          const price = +document.getElementById(`${svc}-price`).textContent.replace('$','');
+          msg += `${svc === 'onetime' ? 'One-time' : 'Move-In/Out'}  $${price}\n`;
+        });
+        msg += '\nRecurring:\n';
+        msg += `• Monthly      ${document.getElementById('monthly-price').textContent}\n`;
+        msg += `• Bi-weekly    ${document.getElementById('biweekly-price').textContent}\n`;
+        msg += `• Weekly       ${document.getElementById('weekly-price').textContent}\n`;
+        msg += `• Every 3 Wks  ${document.getElementById('triweekly-price').textContent}\n`;
+        // alert(msg);
+      });
+    });
+  </script>
+</body>
+</html>
+
+    </html>
 
     <!-- Safety Priority Section -->
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('safetyVideo');
+            const playButton = document.getElementById('playButtonOverlay');
+            const section = document.getElementById('safety-section');
 
+            // Initial setup
+            video.muted = true;
+            video.loop = true;
+            video.playsInline = true;
+
+            // Function to try playing video
+            function tryPlayVideo() {
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        playButton.style.display = 'none';
+                    }).catch((error) => {
+                        // Show button if autoplay fails
+                        playButton.style.display = 'flex';
+                        console.log("Autoplay blocked:", error);
+                    });
+                }
+            }
+
+            // Intersection Observer
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        tryPlayVideo();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, {
+                threshold: 0.5 // At least 50% of the section is visible
+            });
+
+            observer.observe(section);
+
+            // Play button manually enables sound + hides button
+            playButton.addEventListener('click', () => {
+                video.muted = false;
+                video.play().then(() => {
+                    playButton.style.display = 'none';
+                }).catch(error => {
+                    console.log('Manual play failed:', error);
+                });
+            });
+
+            // Hide button when playing
+            video.addEventListener('play', () => {
+                playButton.style.display = 'none';
+            });
+
+            video.addEventListener('pause', () => {
+                playButton.style.display = 'flex';
+            });
+
+            // Unmute on user interaction anywhere (once)
+            document.addEventListener('click', function enableSound() {
+                video.muted = false;
+                document.removeEventListener('click', enableSound);
+            }, { once: true });
+        });
+    </script>
 
     </section>
 
@@ -866,7 +1221,22 @@
             </div>
         </div>
 
+        <script>
+            const servicedZips = ['77433', '77429', '77095', '77377', '77070', '77065'];
 
+            document.getElementById('zip-check-btn').addEventListener('click', () => {
+                const input = document.getElementById('zip-input').value.trim();
+                const result = document.getElementById('zip-result');
+
+                if (servicedZips.includes(input)) {
+                result.textContent = `Good news! We service your area!`;
+                result.className = "text-center mt-2 text-green-600 text-sm font-bold";
+                } else {
+                result.textContent = `Sorry, the location is outside of our service area.`;
+                result.className = "text-center mt-2 text-red-600 text-sm font-bold";
+                }
+            });
+        </script>
 
     </section>
 
@@ -1186,11 +1556,62 @@
     </div> <!-- /overflow -->
   </div>
   <!-- === Styles for continuous scroll (same pattern as “Why Choose Us”) === -->
-
+  <style>
+    @keyframes testimonialScroll {
+   0%   { transform: translateX(0); }
+   100% { transform: translateX(-50%); }
+    }
+    .scrolling-testimonials {
+   display: flex;
+   width: max-content;
+   animation: testimonialScroll 30s linear infinite;
+    }
+    .scrolling-testimonials:hover {
+   animation-play-state: paused;
+    }
+    .testimonial-set { display: flex; }
+    .testimonial-card {
+   flex-shrink: 0;
+   width: 32rem !important;
+   height: 12rem !important;
+   margin: 0 0.75rem;
+   display: flex;
+   align-items: center;
+   box-sizing: border-box;
+   /* Optional: for text truncation */
+   overflow: hidden;
+    }
+    /* Optional: Clamp testimonial text to 3 lines */
+    .testimonial-card .line-clamp-3 {
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+    }
+  </style>
 </section>
 
   <!-- === Styles for continuous scroll (same pattern as “Why Choose Us”) === -->
-
+  <style>
+    @keyframes testimonialScroll {
+      0%   { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .scrolling-testimonials {
+      display: flex;
+      width: max-content;
+      animation: testimonialScroll 30s linear infinite;
+    }
+    .scrolling-testimonials:hover {
+      animation-play-state: paused;   /* Pause on hover */
+    }
+    .testimonial-set { display: flex; }
+    .testimonial-card {
+      flex-shrink: 0;
+      width: 20rem;          /* w‑80 */
+      margin: 0 0.75rem;     /* mx‑3 */
+    }
+  </style>
 </section>
 
 
@@ -1384,10 +1805,106 @@
             </div>
         </section>
 
+        <style>
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .scrolling-features {
+                display: flex;
+                width: max-content;
+                animation: scroll 20s linear infinite;
+            }
+
+            .scrolling-features:hover {
+                animation-play-state: paused;
+            }
+
+            .feature-set {
+                display: flex;
+            }
+
+            .feature-box {
+                flex-shrink: 0;
+                width: 16rem;
+                /* w-64 */
+                margin: 0 0.75rem;
+                /* mx-3 */
+            }
+        </style>
 
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const video = document.getElementById('differenceVideo');
+                const playButton = document.getElementById('videoPlayButton');
+                const section = document.getElementById('difference-section');
 
+                // Initial setup
+                video.muted = true;
+                video.loop = true;
+                video.playsInline = true;
 
+                function tryPlayVideo() {
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            playButton.style.display = 'none';
+                        }).catch((error) => {
+                            // Show button if autoplay fails
+                            playButton.style.display = 'flex';
+                            console.log("Autoplay blocked:", error);
+                        });
+                    }
+                }
+
+                // Intersection Observer to control video playback
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            tryPlayVideo();
+                        } else {
+                            video.pause();
+                        }
+                    });
+                }, {
+                    threshold: 0.5 // 50% of section must be visible
+                });
+
+                observer.observe(section);
+
+                // Manual play button behavior
+                playButton.addEventListener('click', function () {
+                    video.muted = false;
+                    video.play().then(() => {
+                        playButton.style.display = 'none';
+                    }).catch(error => {
+                        console.log('Manual play failed:', error);
+                    });
+                });
+
+                // Unmute on first user interaction anywhere on page
+                document.addEventListener('click', function enableSound() {
+                    video.muted = false;
+                    document.removeEventListener('click', enableSound);
+                }, { once: true });
+
+                // Manage play/pause UI
+                video.addEventListener('play', function () {
+                    playButton.style.display = 'none';
+                });
+
+                video.addEventListener('pause', function () {
+                    playButton.style.display = 'flex';
+                });
+            });
+        </script>
 
     </section>
 
@@ -1466,14 +1983,113 @@
         <i class="fas fa-comment text-[#d4af37]"></i>
     </button>
 </div>-->
+    <script>
+        // Toggle dropdown + set price
+        function selectService(service, basePrice) {
+            const area = parseInt(document.getElementById('area-slider').value);
+            const priceMultiplier = area / 1500; // base is 1500 sq ft
+            const price = Math.round(basePrice * priceMultiplier);
 
+            // Update the price
+            document.getElementById(`${service}-price`).innerText = `$${price}`;
 
+            // Toggle dropdown info
+            const infoEl = document.getElementById(`${service}-info`);
+            if (infoEl) {
+                infoEl.classList.toggle('hidden');
+            }
+        }
+    </script>
+    <script>
+        const stickyLogo = document.getElementById('sticky-logo');
 
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight * 0.7) {
+                stickyLogo.classList.add('show');
+            } else {
+                stickyLogo.classList.remove('show');
+            }
+        });
+    </script>
+    <script>
+        // Simple scroll animation function
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('[data-aos]');
 
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150; // px
 
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('aos-animate');
+                } else {
+                    element.classList.remove('aos-animate');
+                }
+            });
+        }
 
-    <script src="index.js"></script>
-    <script>(function(w, d) { w.CollectId = "688a48ccc3650e35db502adc"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Run once on load
+            animateOnScroll();
+
+            // Then run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+
+    <script>
+        // Scroll animation handler
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('[data-animate]');
+            const windowHeight = window.innerHeight;
+            const windowTop = window.scrollY;
+            const windowBottom = windowTop + windowHeight;
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top + windowTop;
+                const elementBottom = elementTop + element.offsetHeight;
+
+                // Check if element is in viewport
+                if (elementBottom >= windowTop && elementTop <= windowBottom) {
+                    const animationType = element.getAttribute('data-animate');
+                    const delay = element.getAttribute('data-delay') || '0';
+
+                    element.style.animationDelay = delay;
+                    element.classList.add(`animate-${animationType}`);
+                    element.style.opacity = '1'; // Make visible before animation starts
+
+                    // Remove attribute to prevent re-animation
+                    element.removeAttribute('data-animate');
+                }
+            });
+        }
+
+        // Initialize on load and scroll
+        document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+        window.addEventListener('scroll', handleScrollAnimations);
+    </script>
+    <script>
+        // Auto-scrolling animation for Why Choose Us section
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollingFeatures = document.querySelector('.scrolling-features');
+            if (scrollingFeatures) {
+                // Clone the first feature set and append to create seamless loop
+                const featureSet = document.querySelector('.feature-set');
+                const clone = featureSet.cloneNode(true);
+                scrollingFeatures.appendChild(clone);
+
+                // Pause animation on hover
+                scrollingFeatures.addEventListener('mouseenter', () => {
+                    scrollingFeatures.style.animationPlayState = 'paused';
+                });
+                scrollingFeatures.addEventListener('mouseleave', () => {
+                    scrollingFeatures.style.animationPlayState = 'running';
+                });
+            }
+        });
+    </script>
+<script>(function(w, d) { w.CollectId = "688a48ccc3650e35db502adc"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
 </body>
 
 </html>
