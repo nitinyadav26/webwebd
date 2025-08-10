@@ -3001,3 +3001,159 @@ video {
   [data-animate] {
     opacity: 0;
   }
+
+/* ========== EXTRACTED EMBEDDED STYLES FROM HTML ========== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@500;700&display=swap');
+
+/* Award Badge Animation */
+@keyframes badgeIn {
+  0%   { opacity: 0; transform: translateY(-4px) scale(0.97);}
+  60%  { opacity: 1; transform: translateY(2px) scale(1.01);}
+  100% { opacity: 1;}
+}
+
+#awardBadgeInline.animate-badge-enter {
+  animation: badgeIn 0.8s cubic-bezier(.22,.61,.36,1.01) forwards;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#awardBadgeInline:hover {
+  transform: translateY(-2px) scale(1.03);
+  transition: transform .2s ease;
+}
+
+/* Services Section Styles */
+#services .service-item {
+  transition: all 0.3s ease;
+}
+
+#services .grid {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 16px; 
+}
+
+#services .service-category {
+  flex: 1 0 300px; 
+  min-height: 300px; 
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#services .rotate-180 {
+  transform: rotate(180deg);
+}
+
+#services #kitchen-extra,
+#services #bathroom-extra,
+#services #bedroom-extra,
+#services #living-extra {
+  transition: all 0.3s ease;
+}
+
+/* Button Interactive Styles */
+.btn-interactive { 
+  transition: transform 0.3s ease; 
+}
+
+.btn-interactive:hover { 
+  transform: scale(1.05); 
+}
+
+.btn-interactive:active { 
+  transform: scale(0.95); 
+}
+
+.btn-interactive:focus { 
+  outline: none; 
+  box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px white; 
+}
+
+/* Testimonial Scroll Animation */
+@keyframes testimonialScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.scrolling-testimonials {
+  display: flex;
+  width: max-content;
+  animation: testimonialScroll 30s linear infinite;
+}
+
+.scrolling-testimonials:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-set { 
+  display: flex; 
+}
+
+.testimonial-card {
+  flex-shrink: 0;
+  width: 32rem !important;
+  height: 12rem !important;
+  margin: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Text truncation for testimonials */
+.testimonial-card .line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Reverse testimonial scroll animation */
+@keyframes testimonialScrollReverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.scrolling-testimonials.reverse {
+  animation: testimonialScrollReverse 30s linear infinite;
+}
+
+.scrolling-testimonials.reverse .testimonial-card {
+  width: 20rem;
+  margin: 0 0.75rem;
+}
+
+/* Features Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scrolling-features {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.scrolling-features:hover {
+  animation-play-state: paused;
+}
+
+.feature-set {
+  display: flex;
+}
+
+.feature-box {
+  flex-shrink: 0;
+  width: 16rem;
+  margin: 0 0.75rem;
+}
+
+/* ========== END OF EXTRACTED EMBEDDED STYLES ========== */
