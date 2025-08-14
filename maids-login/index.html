@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Maids of Cy-Fair</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-section">
+                <h1 class="company-name">🏠 Maids of Cy-Fair</h1>
+                <p class="tagline">Finally, Cleaning That Makes Sense</p>
+            </div>
+        </header>
+
+        <!-- Main Login Section -->
+        <main class="main-content">
+            <div class="login-card card">
+                <div class="card__body">
+                    <!-- Tab Navigation -->
+                    <div class="tab-navigation">
+                        <button type="button" class="tab-btn active" data-tab="customer">
+                            👤 Customer Login
+                        </button>
+                        <button type="button" class="tab-btn" data-tab="staff">
+                            🧹 Staff Login
+                        </button>
+                    </div>
+
+                    <!-- Login Forms -->
+                    <div class="tab-content">
+                        <!-- Customer Login Form -->
+                        <div class="tab-panel active" id="customer-panel">
+                            <form class="login-form" id="customer-form" novalidate>
+                                <div class="form-group">
+                                    <label for="customer-email" class="form-label">Email Address</label>
+                                    <input 
+                                        type="email" 
+                                        id="customer-email" 
+                                        name="email" 
+                                        class="form-control" 
+                                        placeholder="Enter your email address"
+                                        autocomplete="email"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="customer-password" class="form-label">Password</label>
+                                    <input 
+                                        type="password" 
+                                        id="customer-password" 
+                                        name="password" 
+                                        class="form-control" 
+                                        placeholder="Enter your password"
+                                        autocomplete="current-password"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="customer-remember" name="remember" />
+                                        <span class="checkbox-text">Remember me</span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn--primary btn--full-width">
+                                    🔐 Login to My Account
+                                </button>
+                            </form>
+
+                            <div class="form-links">
+                                <button type="button" class="link-button" id="customer-forgot-link">Forgot your password?</button>
+                                <p class="signup-text">
+                                    Don't have an account? 
+                                    <button type="button" class="link-button" id="signup-link">Sign up here</button>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Staff Login Form -->
+                        <div class="tab-panel" id="staff-panel">
+                            <form class="login-form" id="staff-form" novalidate>
+                                <div class="form-group">
+                                    <label for="staff-username" class="form-label">Staff Username</label>
+                                    <input 
+                                        type="text" 
+                                        id="staff-username" 
+                                        name="username" 
+                                        class="form-control" 
+                                        placeholder="Enter your staff username"
+                                        autocomplete="username"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="staff-password" class="form-label">Password</label>
+                                    <input 
+                                        type="password" 
+                                        id="staff-password" 
+                                        name="password" 
+                                        class="form-control" 
+                                        placeholder="Enter your password"
+                                        autocomplete="current-password"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="staff-remember" name="remember" />
+                                        <span class="checkbox-text">Remember me</span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn--primary btn--full-width">
+                                    🚪 Staff Portal Access
+                                </button>
+                            </form>
+
+                            <div class="form-links">
+                                <button type="button" class="link-button" id="staff-forgot-link">Forgot your password?</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Note -->
+                    <div class="security-note">
+                        🔒 <strong>Secure Login:</strong> Your information is protected with industry-standard encryption
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Website -->
+            <div class="back-link-container">
+                <button type="button" class="btn btn--outline" id="back-to-website">
+                    ← Back to Website
+                </button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p class="service-area">Serving Cypress, TX and surrounding areas</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span>📞 (832) 727-0277</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📧 info@maidsofcyfair.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>🕒 Mon-Fri: 8am - 6pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">✓ Fully Insured & Background Checked</div>
+                    <div class="feature-item">✓ Secure Card System</div>
+                    <div class="feature-item">✓ Professional Service</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Message Display -->
+    <div class="message-display hidden" id="message-display">
+        <div class="message-content">
+            <span class="message-text" id="message-text"></span>
+            <button type="button" class="message-close" id="message-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
